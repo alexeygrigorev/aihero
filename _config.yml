@@ -7,7 +7,6 @@ url: "https://alexeygrigorev.github.io/ai"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
 
 # Site configuration
 author: "Alexey Grigorev"
@@ -15,27 +14,38 @@ email: "alexey@datatalks.club"
 twitter_username: "AlexeyGrigorev"
 github_username: "alexeygrigorev"
 
-# GitHub Pages settings
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: :always
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Exclude files from processing
+# Exclude from processing
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
+  - .jekyll-metadata
+  - README.md
+  - assets/README.md
+  - "*.log"
+  - .git/
+  - .gitignore
 
-# Collections and defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
+# Performance optimizations
+incremental: true
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false

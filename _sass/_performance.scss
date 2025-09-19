@@ -1,0 +1,123 @@
+// Performance Optimizations
+
+// Critical CSS - Above the fold styles
+.hero,
+.header,
+.courses-section {
+    // Prevent layout shift during loading
+    min-height: 1px;
+}
+
+// Reduce paint complexity
+* {
+    // Optimize box-sizing for better performance
+    box-sizing: border-box;
+}
+
+// Optimize font loading
+body {
+    // Prevent invisible text during font swap
+    font-display: swap;
+}
+
+// Optimize animations for 60fps
+@media (prefers-reduced-motion: no-preference) {
+    // Only apply animations if user hasn't requested reduced motion
+    .course-card,
+    .enroll-button {
+        // Ensure animations run on compositor
+        will-change: transform;
+    }
+}
+
+// Disable animations for users who prefer reduced motion
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// Optimize images (when added)
+img {
+    // Prevent layout shift
+    height: auto;
+    max-width: 100%;
+    // Improve image rendering
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+// Optimize focus states for better accessibility and performance
+:focus-visible {
+    outline: 2px solid #4338CA;
+    outline-offset: 2px;
+}
+
+// Remove focus outline for mouse users
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+// Optimize list rendering
+ul, ol {
+    // Prevent unnecessary reflows
+    list-style-position: inside;
+}
+
+// Optimize table rendering (if used)
+table {
+    // Improve table performance
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+// Optimize scroll performance
+.courses-grid,
+.ai-courses-grid {
+    // Enable hardware acceleration for scrolling
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+}
+
+// Optimize text rendering
+body {
+    // Improve text rendering performance
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Optimize for high DPI displays
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    // High DPI optimizations can be added here
+}
+
+// Optimize for print
+@media print {
+    // Remove animations and transitions for print
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    // Optimize colors for print
+    body {
+        color: #000 !important;
+        background: #fff !important;
+    }
+    
+    // Hide non-essential elements
+    .course-actions {
+        display: none !important;
+    }
+} 

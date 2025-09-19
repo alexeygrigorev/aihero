@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://datatalks.club">
+    <link rel="dns-prefetch" href="https://airtable.com">
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="dns-prefetch" href="https://pythoninvest.com">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Page-specific styles -->
+    {% if page.layout == 'default' and page.url == '/' %}
+        {% include main-page-styles.html %}
+    {% endif %}
+    
+    <!-- Meta tags for better performance -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="color-scheme" content="light">
+</head>
+<body>
+    {{ content }}
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>
