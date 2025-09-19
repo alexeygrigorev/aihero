@@ -1,0 +1,41 @@
+# Site settings
+title: "AI Bootcamp: From RAG to Agents"
+description: "Master AI systems from Retrieval-Augmented Generation to intelligent agents in this comprehensive hands-on course"
+baseurl: ""
+url: "https://alexeygrigorev.github.io/ai"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Site configuration
+author: "Alexey Grigorev"
+email: "alexey@datatalks.club"
+twitter_username: "AlexeyGrigorev"
+github_username: "alexeygrigorev"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
