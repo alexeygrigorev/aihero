@@ -1,45 +1,49 @@
-// Enhanced CSS Custom Properties System
+// Minimalistic CSS Properties - DataTalks.Club Inspired
 :root {
-  // Primary Colors - WCAG AA Compliant
-  --primary-color: #1d4ed8;  // Darker blue for better contrast (4.5:1+)
-  --primary-light: rgba(29, 78, 216, 0.1);
-  --primary-dark: #1e3a8a;  // Even darker for emphasis
-  --primary-hover: #2563eb;  // Original color as hover state
-  --primary-focus: rgba(29, 78, 216, 0.2);
+  // Primary Colors - Clean and Simple
+  --primary-color: #4a90e2;  // Clean blue similar to DataTalks
+  --primary-light: rgba(74, 144, 226, 0.1);
+  --primary-dark: #357abd;
+  --primary-hover: #357abd;
+  --primary-focus: rgba(74, 144, 226, 0.2);
   
-  // Success & Status Colors - WCAG AA Compliant
-  --success-color: #059669;  // Darker green for better contrast
-  --success-light: rgba(5, 150, 105, 0.1);
-  --warning-color: #d97706;  // Darker orange for better contrast
-  --warning-light: rgba(217, 119, 6, 0.1);
-  --error-color: #dc2626;   // Darker red for better contrast
-  --error-light: rgba(220, 38, 38, 0.1);
+  // Success & Status Colors - Minimalistic
+  --success-color: #5cb85c;  // Clean green for buttons
+  --success-light: rgba(92, 184, 92, 0.1);
+  --warning-color: #f0ad4e;
+  --warning-light: rgba(240, 173, 78, 0.1);
+  --error-color: #d9534f;
+  --error-light: rgba(217, 83, 79, 0.1);
   
-  // Text Colors - WCAG AA+ Compliant
-  --text-dark: #0f172a;    // Excellent contrast (15.3:1)
-  --text-medium: #1e293b;  // Excellent contrast (12.6:1)
-  --text-light: #334155;   // Great contrast (9.4:1)
-  --text-muted: #475569;   // Good contrast (7.1:1) - improved from previous
+  // Text Colors - Clean and Readable
+  --text-dark: #333333;    // Clean dark gray
+  --text-medium: #666666;  // Medium gray for secondary text
+  --text-light: #999999;   // Light gray for muted text
+  --text-muted: #aaaaaa;   // Very light gray for subtle text
   --text-white: #ffffff;
   
-  // Background Colors - Improved contrast and accessibility
+  // Background Colors - Clean and Simple
   --bg-white: #ffffff;
-  --bg-light: #f8fafc;
-  --bg-gray: #f1f5f9;
-  --bg-purple: #faf5ff;
-  --bg-gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  --bg-gradient-subtle: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
-  --bg-gradient-cta: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e3a8a 100%);
+  --bg-light: #f8f9fa;
+  --bg-gray: #f5f5f5;
+  --bg-purple: #f8f9fa;
   
-  // Border & Shadow - Enhanced depth
-  --border-color: #e2e8f0;
-  --border-light: #f1f5f9;
+  // Simple gradient system
+  --bg-gradient-primary: var(--primary-color);
+  --bg-gradient-hero: #f8f9fa;
+  --bg-gradient-subtle: var(--bg-light);
+  --bg-gradient-cta: var(--primary-color);
+  --bg-gradient-card: var(--bg-white);
+  
+  // Border & Shadow - Minimal and Clean
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
   --border-focus: var(--primary-color);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-focus: 0 0 0 3px var(--primary-focus);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 2px var(--primary-focus);
   
   // Consistent Spacing Scale - Optimized for better scanning
   --spacing-xs: 0.5rem;    // 8px
@@ -121,26 +125,15 @@ body {
   }
 }
 
-// Hero Section - Clean and Focused
+// Hero Section - Clean and Minimalistic
 .hero-section {
-  background: var(--bg-gradient-primary);
-  color: var(--text-white);
-  padding: var(--spacing-3xl) 0;  // Reduced from 4xl
+  background: var(--bg-gradient-hero);
+  color: var(--text-dark);
+  padding: var(--spacing-4xl) 0;
   position: relative;
-  overflow: hidden;
-  transition: var(--transition-slow);
-  
-  // Subtle pattern overlay
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='7' cy='7' r='7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-    pointer-events: none;
-  }
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
 
   .container {
     position: relative;
@@ -168,30 +161,37 @@ body {
   .hero-content {
     .hero-badge {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-full);
-      padding: var(--spacing-xs) var(--spacing-lg);
+      padding: var(--spacing-sm) var(--spacing-xl);
       font-size: var(--text-sm);
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: var(--spacing-xl);
+      color: var(--primary-color);
+      transition: all var(--transition-base);
+      
+      &:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-sm);
+      }
     }
     
     .hero-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);  // Reduced size
-      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
       line-height: var(--leading-tight);
-      margin-bottom: var(--spacing-md);  // Reduced margin
-      letter-spacing: -0.025em;
+      margin-bottom: var(--spacing-lg);
+      color: var(--text-dark);
     }
     
     .hero-subtitle {
-      font-size: var(--text-base);  // Reduced from lg
+      font-size: var(--text-xl);
       line-height: var(--leading-relaxed);
-      margin-bottom: var(--spacing-lg);  // Reduced margin
-      opacity: 0.95;
-      max-width: 500px;
+      margin-bottom: var(--spacing-xl);
+      max-width: 600px;
+      color: var(--text-medium);
+      font-weight: 400;
       
       @media (max-width: 768px) {
         max-width: none;
@@ -202,12 +202,13 @@ body {
     
     .hero-stats {
       display: flex;
-      gap: var(--spacing-lg);
+      gap: var(--spacing-2xl);
+      margin-top: var(--spacing-xl);
       
       @media (max-width: 768px) {
         justify-content: center;
         flex-wrap: wrap;
-        gap: var(--spacing-md);
+        gap: var(--spacing-xl);
       }
       
       .stat {
@@ -215,16 +216,30 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        background: var(--bg-white);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-lg) var(--spacing-xl);
+        transition: all var(--transition-base);
+        
+        &:hover {
+          border-color: var(--primary-color);
+          box-shadow: var(--shadow-md);
+        }
         
         .stat-number {
-          font-size: var(--text-lg);
+          font-size: var(--text-2xl);
           font-weight: 700;
-          margin-bottom: var(--spacing-xs);
+          margin-bottom: var(--spacing-sm);
+          color: var(--primary-color);
         }
         
         .stat-label {
           font-size: var(--text-sm);
-          opacity: 0.9;
+          color: var(--text-medium);
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
       }
     }
@@ -235,15 +250,14 @@ body {
   }
 }
 
-// Enhanced Signup Form
+// Clean Signup Form
 .signup-form-card {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
+  background: var(--bg-white);
   color: var(--text-dark);
-  padding: var(--spacing-xl);  // Reduced from 2xl
-  border-radius: var(--radius-xl);  // Slightly reduced
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
   transition: var(--transition-base);
   
   .form-header {
@@ -295,7 +309,7 @@ body {
     }
     
     .btn-hero-primary {
-      background: var(--success-color);  // Now using darker, more accessible green
+      background: var(--success-color);
       border: none;
       border-radius: var(--radius-lg);
       color: var(--text-white);
@@ -310,21 +324,15 @@ body {
       justify-content: center;
       gap: var(--spacing-sm);
       min-height: 52px;
-      box-shadow: 0 2px 4px -1px rgba(5, 150, 105, 0.2);
       
       &:hover {
-        background: #047857;  // Even darker on hover for better feedback
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.4);
-      }
-      
-      &:active {
-        transform: translateY(0);
+        background: #449d44;
+        box-shadow: var(--shadow-md);
       }
       
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+        box-shadow: var(--shadow-focus);
       }
     }
   }
@@ -501,43 +509,25 @@ section {
   }
 }
 
-// Card Components - More compact
+// Card Components - Clean and Simple
 .capability-card,
 .benefit-card {
   background: var(--bg-white);
-  padding: var(--spacing-xl);  // Reduced from 2xl
-  border-radius: var(--radius-lg);  // Slightly reduced
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   text-align: center;
   transition: all var(--transition-base);
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--bg-gradient-primary);
-    opacity: 0;
-    transition: opacity var(--transition-base);
-  }
+  box-shadow: var(--shadow-sm);
   
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
     
-    &::before {
-      opacity: 1;
-    }
-    
     .capability-icon,
     .benefit-icon {
       svg {
-        transform: scale(1.1);
         color: var(--primary-hover);
       }
     }
@@ -545,18 +535,22 @@ section {
   
   .capability-icon,
   .benefit-icon {
-    width: 48px;  // Restored for better visibility and icon clarity
-    height: 48px;
-    margin: 0 auto var(--spacing-md);
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--spacing-lg);
     color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--primary-light);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-base);
     
     svg {
-      width: 32px;  // Proper icon size within container
+      width: 32px;
       height: 32px;
-      transition: var(--transition-base);
+      transition: all var(--transition-base);
     }
   }
   
@@ -812,7 +806,7 @@ section {
   }
 }
 
-// Buttons
+// Buttons - Clean and Simple
 .btn {
   display: inline-block;
   padding: var(--spacing-md) var(--spacing-xl);
@@ -826,15 +820,13 @@ section {
   font-size: var(--text-base);
   
   &.btn-primary {
-    background: var(--bg-gradient-primary);
+    background: var(--primary-color);
     color: var(--text-white);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--primary-color);
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(255, 255, 255, 0.4);
-      background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+      background: var(--primary-hover);
+      box-shadow: var(--shadow-md);
     }
   }
   
@@ -845,14 +837,11 @@ section {
       color: var(--primary-color) !important;
       border: 2px solid var(--text-white);
       font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       
       &:hover {
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--bg-light);
         color: var(--primary-dark) !important;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        border-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-md);
       }
     }
   }
@@ -863,13 +852,13 @@ section {
   }
 }
 
-// Special Sections
+// Special Sections - Clean and Simple
 .benefits-section {
   background: var(--bg-light);
-  border-radius: var(--radius-xl);  // Reduced from 2xl
-  margin: var(--spacing-3xl) 0;  // Reduced from 4xl
-  padding: var(--spacing-3xl) var(--spacing-xl);  // Reduced from 4xl
-  transition: var(--transition-base);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-4xl) 0;
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  border: 1px solid var(--border-color);
 }
 
 .bootcamp-section {
@@ -910,11 +899,11 @@ section {
 }
 
 .testimonials-section {
-  background: var(--bg-gray);
-  border-radius: var(--radius-xl);  // Reduced from 2xl
-  margin: var(--spacing-3xl) 0;  // Reduced from 4xl
-  padding: var(--spacing-3xl) var(--spacing-xl);  // Reduced from 4xl
-  transition: var(--transition-base);
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  margin: var(--spacing-4xl) 0;
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  border: 1px solid var(--border-color);
   
   .social-proof-stats {
     display: flex;
@@ -1004,18 +993,14 @@ section {
   margin-top: var(--spacing-3xl);  // Reduced from 4xl
   
   .cta-section {
-    background: var(--bg-gradient-cta);  // Using optimized CTA gradient
+    background: var(--primary-color);
     color: var(--text-white);
     padding: var(--spacing-3xl) var(--spacing-xl);
-    border-radius: var(--radius-2xl);
+    border-radius: var(--radius-lg);
     text-align: center;
-    transition: var(--transition-base);
-    position: relative;
     
-    // Ensure all text is white with high contrast
     h2 {
       color: var(--text-white) !important;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       margin-bottom: var(--spacing-lg);
     }
     
@@ -1024,7 +1009,6 @@ section {
       font-size: var(--text-lg);
       line-height: var(--leading-relaxed);
       margin-bottom: var(--spacing-xl);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       
       strong {
         color: var(--text-white) !important;
@@ -1037,12 +1021,6 @@ section {
       font-size: var(--text-base);
       font-weight: 500;
       margin-top: var(--spacing-lg);
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    }
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-xl);
     }
   }
   
@@ -1288,5 +1266,17 @@ a {
     --text-dark: #000000;
     --text-medium: #000000;
     --border-color: #000000;
+  }
+}
+
+// Simple Keyframe Animations
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
