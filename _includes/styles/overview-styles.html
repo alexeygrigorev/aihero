@@ -684,68 +684,62 @@
   }
 }
 
-/* Graduate Benefit Highlight - Consistent with Page Design */
+/* Graduate Benefit - Clean and Centered Design */
 .graduate-benefit {
-  max-width: 700px;
-  margin: 0 auto var(--spacing-2xl);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-2xl) 0;
+  padding: 0;
 }
 
 .benefit-container {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  color: white;
-  padding: var(--spacing-xl);
+  background: var(--bg-white);
+  border: 2px solid var(--success-color);
   border-radius: var(--radius-lg);
-  position: relative;
-  overflow: hidden;
+  padding: var(--spacing-2xl);
   text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  max-width: 650px;
+  width: 100%;
   
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transform: translate(30px, -30px);
-  }
-}
-
-.benefit-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
-  
-  svg {
-    color: #fbbf24;
-  }
-  
-  span {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.9;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
   }
 }
 
 .benefit-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
   h4 {
-    font-size: var(--text-xl);
+    font-size: var(--text-2xl);
     font-weight: 700;
-    margin: 0 0 var(--spacing-sm) 0;
+    margin: 0 0 var(--spacing-md) 0;
     line-height: var(--leading-tight);
+    color: var(--text-dark);
   }
   
   p {
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
     margin: 0;
-    opacity: 0.95;
+    color: var(--text-medium);
+    max-width: 100%;
   }
+}
+
+/* Specific override for $100 discount text color */
+.discount-amount {
+  color: #5cb85c !important;
+  font-weight: 700 !important;
+  background: none !important;
 }
 
 /* Bootcamp CTA - Consistent Design */
