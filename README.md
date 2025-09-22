@@ -1,6 +1,6 @@
 # AI Agent Course Landing Page
 
-Jekyll-based landing page for the "Build Your Own AI Agent" 7-day email course.
+Jekyll-based landing page for the "7-Day AI Agents Email Crash-Course".
 
 ## Local Development
 
