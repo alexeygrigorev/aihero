@@ -1,6 +1,5 @@
-<style>
 /* ===== AI AGENT LANDING PAGE STYLES ===== */
-/* Page-specific enhancements - main styles are in _sass/_styles.scss */
+/* Page-specific enhancements - main styles are in _styles.scss */
 
 /* Demo preview styling */
 .demo-preview {
@@ -12,12 +11,12 @@
   margin: var(--spacing-3xl) 0;
   color: var(--text-muted);
   transition: all var(--transition-base);
-}
 
-.demo-preview:hover {
-  border-color: var(--primary-color);
-  background: var(--primary-light);
-  color: var(--primary-color);
+  &:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+    color: var(--primary-color);
+  }
 }
 
 /* Enhanced response messages */
@@ -68,4 +67,3 @@
     margin: var(--spacing-3xl) 0;
   }
 }
-</style>

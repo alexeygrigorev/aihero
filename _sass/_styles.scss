@@ -7,7 +7,7 @@
   --primary-hover: #357abd;
   --primary-focus: rgba(74, 144, 226, 0.2);
   
-  // Success & Status Colors - Minimalistic
+  // Success and Status Colors - Minimalistic
   --success-color: #5cb85c;  // Clean green for buttons
   --success-light: rgba(92, 184, 92, 0.1);
   --warning-color: #f0ad4e;
@@ -35,7 +35,7 @@
   --bg-gradient-cta: var(--primary-color);
   --bg-gradient-card: var(--bg-white);
   
-  // Border & Shadow - Minimal and Clean
+  // Border and Shadow - Minimal and Clean
   --border-color: #e0e0e0;
   --border-light: #f0f0f0;
   --border-focus: var(--primary-color);
@@ -260,7 +260,7 @@ body {
     margin-right: var(--spacing-md);
   }
   
-  .hero-content-centered & {
+  .hero-content-centered and {
     margin-top: var(--spacing-xl);
   }
   
@@ -288,7 +288,7 @@ body {
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     
-    .hero-content-centered & {
+    .hero-content-centered and {
       flex-direction: row;
       align-items: stretch;
       gap: var(--spacing-sm);  // Smaller gap between input and button
@@ -310,7 +310,7 @@ body {
       transition: all var(--transition-base);
       color: var(--text-dark); // Ensure text color contrast
       
-      .hero-content-centered & {
+      .hero-content-centered and {
         flex: 1;  // Take remaining space in horizontal layout
       }
       
@@ -345,7 +345,7 @@ body {
       min-height: 52px;
       white-space: nowrap;
       
-      .hero-content-centered & {
+      .hero-content-centered and {
         flex-shrink: 0;
         min-width: 140px;  // Minimum button width
         
@@ -1077,7 +1077,7 @@ section {
   }
   
   // Special styling for CTA section buttons
-  .cta-section & {
+  .cta-section and {
     &.btn-primary {
       background: var(--text-white);
       color: var(--primary-color) !important;
@@ -1147,6 +1147,205 @@ section {
     margin: var(--spacing-xl) 0;
     text-align: center;
     border: 2px solid var(--primary-color);
+  }
+  
+  // Progression styling
+  .progression-step {
+    .step-pricing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-sm);
+      
+      @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+      }
+      
+      .step-duration {
+        font-size: var(--text-sm);
+        color: var(--text-medium);
+      }
+      
+      .step-price {
+        font-weight: 700;
+        color: var(--primary-color);
+        font-size: var(--text-lg);
+      }
+    }
+    
+    .step-cta {
+      margin-top: var(--spacing-md);
+      
+      .bootcamp-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: var(--text-sm);
+        font-weight: 600;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border: 1px solid var(--primary-color);
+        border-radius: var(--radius-md);
+        transition: all var(--transition-base);
+        
+        &:hover {
+          background: var(--primary-color);
+          color: var(--text-white);
+          transform: translateY(-1px);
+          box-shadow: var(--shadow-sm);
+        }
+        
+        &:focus {
+          outline: none;
+          box-shadow: var(--shadow-focus);
+        }
+      }
+    }
+  }
+  
+  // Bootcamp upgrade section
+  .bootcamp-upgrade {
+    margin: var(--spacing-2xl) 0;
+    
+    .upgrade-highlight {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-white) 100%);
+      border: 2px solid var(--primary-color);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      text-align: center;
+      
+      h3 {
+        font-size: var(--text-xl);
+        font-weight: 600;
+        margin-bottom: var(--spacing-md);
+        color: var(--text-dark);
+      }
+      
+      p {
+        color: var(--text-medium);
+        margin-bottom: var(--spacing-lg);
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .upgrade-pricing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-md);
+        
+        @media (max-width: 480px) {
+          flex-direction: column;
+          gap: var(--spacing-sm);
+        }
+        
+        .price {
+          font-size: var(--text-2xl);
+          font-weight: 700;
+          color: var(--primary-color);
+        }
+        
+        .discount-note {
+          font-size: var(--text-sm);
+          color: var(--text-medium);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  // Graduate benefit section
+  .graduate-benefit {
+    margin: var(--spacing-2xl) 0;
+    
+    .benefit-container {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      transition: all var(--transition-base);
+      text-align: center;
+      
+      &:hover {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-sm);
+      }
+      
+      .benefit-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        
+        svg {
+          color: var(--primary-color);
+          flex-shrink: 0;
+        }
+        
+        span {
+          font-size: var(--text-sm);
+          font-weight: 600;
+          color: var(--primary-color);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+      
+      .benefit-content {
+        h4 {
+          font-size: var(--text-lg);
+          font-weight: 600;
+          margin-bottom: var(--spacing-sm);
+          color: var(--text-dark);
+        }
+        
+        p {
+          color: var(--text-medium);
+          line-height: var(--leading-relaxed);
+          margin: 0;
+          
+          strong {
+            color: var(--primary-color);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  
+  // Enhanced CTA styling
+  .bootcamp-cta {
+    text-align: center;
+    margin: var(--spacing-2xl) 0;
+    
+    .btn {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      padding: var(--spacing-lg) var(--spacing-2xl);
+    }
+    
+    .cta-note {
+      margin-top: var(--spacing-md);
+      font-size: var(--text-sm);
+      color: var(--text-medium);
+      font-weight: 500;
+    }
+    
+    .cta-subtext {
+      margin-top: var(--spacing-sm);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -1565,7 +1764,7 @@ a {
   }
 }
 
-// Performance & Accessibility
+// Performance and Accessibility
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,0 +1,205 @@
+<style>
+/* Certificate Section Styles */
+.certificate-section {
+  background: var(--bg-light);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.certificate-preview {
+  max-width: 800px;
+  margin: var(--spacing-2xl) auto;
+}
+
+.certificate-placeholder {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.certificate-frame {
+  border: 3px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, #fefefe 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.certificate-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.certificate-header h3 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.certificate-logo {
+  font-size: 2rem;
+  margin-top: var(--spacing-sm);
+}
+
+.certificate-body {
+  margin: var(--spacing-2xl) 0;
+}
+
+.certificate-text {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  margin: var(--spacing-sm) 0;
+}
+
+.certificate-name {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+}
+
+.certificate-course {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: var(--spacing-md) 0;
+}
+
+.certificate-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  font-style: italic;
+  margin-bottom: var(--spacing-xl);
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.signature-line {
+  text-align: left;
+}
+
+.signature-line span {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-dark);
+  display: block;
+  border-bottom: 1px solid var(--text-dark);
+  padding-bottom: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.signature-line small {
+  font-size: var(--text-sm);
+  color: var(--text-medium);
+}
+
+.certificate-date span {
+  font-size: var(--text-md);
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+/* Certificate Benefits Grid */
+.certificate-benefits {
+  margin: var(--spacing-2xl) 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.benefit-item h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.benefit-item p {
+  font-size: var(--text-md);
+  color: var(--text-medium);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Certificate CTA */
+.certificate-cta {
+  margin-top: var(--spacing-2xl);
+}
+
+.certificate-cta .cta-text {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.certificate-cta .btn {
+  font-size: var(--text-lg);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .certificate-frame {
+    padding: var(--spacing-lg);
+  }
+  
+  .certificate-footer {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .signature-line {
+    text-align: center;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .certificate-name {
+    font-size: var(--text-xl);
+  }
+  
+  .certificate-course {
+    font-size: var(--text-lg);
+  }
+}
+</style>

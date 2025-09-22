@@ -1,0 +1,217 @@
+<style>
+/* Architecture Diagram Styles */
+.architecture-section {
+  padding: var(--spacing-3xl) 0;
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  margin: var(--spacing-2xl) 0;
+  border: 1px solid var(--border-light);
+}
+
+.architecture-section .section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.architecture-section .section-header h3 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.architecture-section .section-intro {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.architecture-diagram {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-2xl);
+  padding: 0 var(--spacing-lg);
+}
+
+.diagram-svg {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+}
+
+.diagram-step {
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.diagram-step:hover {
+  transform: scale(1.05);
+}
+
+.diagram-step:hover circle {
+  filter: brightness(1.1);
+}
+
+.step-label {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--text-dark);
+}
+
+.flow-label {
+  font-family: var(--font-family);
+  font-size: 10px;
+  font-weight: 500;
+  fill: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-label {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--text-medium);
+}
+
+.architecture-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.detail-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.detail-number {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.detail-content h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--leading-tight);
+}
+
+.detail-content p {
+  font-size: var(--text-sm);
+  color: var(--text-medium);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .architecture-diagram {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .diagram-svg {
+    max-height: 280px;
+  }
+  
+  .step-label {
+    font-size: 10px;
+  }
+  
+  .flow-label {
+    font-size: 9px;
+  }
+  
+  .tech-label {
+    font-size: 9px;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .detail-item {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .architecture-section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .diagram-svg {
+    max-height: 220px;
+  }
+  
+  .step-label {
+    font-size: 9px;
+  }
+  
+  .tech-label {
+    display: none; /* Hide tech labels on very small screens */
+  }
+  
+  .flow-label {
+    font-size: 8px;
+  }
+}
+
+/* Animation for diagram elements */
+.diagram-step circle {
+  transition: all var(--transition-base);
+}
+
+.diagram-step:hover circle {
+  stroke-width: 4;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .diagram-step,
+  .detail-item {
+    transition: none;
+  }
+  
+  .diagram-step:hover {
+    transform: none;
+  }
+  
+  .detail-item:hover {
+    transform: none;
+  }
+}
+</style>

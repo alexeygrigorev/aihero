@@ -4,484 +4,230 @@ title: Build Your Own AI Agent - Free 7-Day Email Course
 description: Learn to build a production-ready AI agent for your GitHub project in just 7 days. From data ingestion to deployment and sharing results.
 ---
 
-<div class="hero-section">
+<!-- Page Styles -->
+{% include styles/hero-styles.html %}
+{% include styles/intro-styles.html %}
+{% include styles/overview-styles.html %}
+{% include styles/curriculum-styles.html %}
+{% include styles/architecture-styles.html %}
+{% include styles/certificate-styles.html %}
+
+<!-- Hero Section Content -->
+<div class="hero">
   <div class="container">
-    <div class="hero-content-centered">
-      <div class="hero-badge">7-Day Free Course</div>
-      <h1 class="hero-title">Build Your Own AI Agent</h1>
-      <p class="hero-subtitle">Turn Your GitHub Project Into an Intelligent Assistant</p>
+    <div class="hero-content">
+      <div class="badge">7-Day Free Course</div>
+      <h1>Build Your Own AI Agent</h1>
+      <p class="subtitle">Build a complete AI agent from data ingestion to deployment based on your GitHub project in just 7 days.</p>
       
-      <!-- Signup Form directly below hero text -->
-      <div class="hero-form-container">
-        <div class="signup-form-card">
-          <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                action="https://club.us19.list-manage.com/subscribe/post?u=0d7822ab98152f5afc118c176&id=9e48436651"
-                class="validate" target="_blank" novalidate>
+      <div class="signup-form">
+        <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+              action="https://club.us19.list-manage.com/subscribe/post?u=0d7822ab98152f5afc118c176&id=9e48436651"
+              class="validate" target="_blank" novalidate>
+          
+          <div class="form-group">
+            <label class="sr-only" for="mce-EMAIL">Email</label>
+            <input type="email" value="" name="EMAIL" class="email-input" id="mce-EMAIL" 
+                   placeholder="Enter your email address" required>
             
-            <div class="form-input-container">
-              <label class="sr-only" for="mce-EMAIL">Email</label>
-              <input type="email" value="" name="EMAIL" class="form-control-hero" id="mce-EMAIL" 
-                     placeholder="Enter your email address" required>
-              
-              <button type="submit" name="subscribe" class="btn-hero-primary">
-                <i class="far fa-paper-plane"></i>
-                <span>Get Free Course</span>
-              </button>
-            </div>
-            
-            <!-- Hidden Mailchimp fields - DO NOT MODIFY -->
-            <div hidden=""><input type="hidden" name="tags" value="6399033"></div>
-            
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_0d7822ab98152f5afc118c176_97178021aa" tabindex="-1" value="">
-            </div>
-            
-            <div class="form-trust-signals">
-              <span class="trust-item">✓ First lesson in 3 minutes</span>
-            </div>
-            
-            <!-- Mailchimp response messages -->
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display: none;"></div>
-              <div class="response" id="mce-success-response" style="display: none;"></div>
-            </div>
-          </form>
-        </div>
+            <button type="submit" name="subscribe" class="submit-btn">
+              <i class="far fa-paper-plane"></i>
+              <span>Get Free Course</span>
+            </button>
+          </div>
+          
+          <!-- Hidden Mailchimp fields -->
+          <div hidden=""><input type="hidden" name="tags" value="6399033"></div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_0d7822ab98152f5afc118c176_97178021aa" tabindex="-1" value="">
+          </div>
+          
+          <div class="trust-signals">
+            <span>🔧 All lessons are hands-on with practical exercises.</span>
+            <span>🏆 Receive a certificate of completion to showcase your new AI skills.</span>
+          </div>
+          
+          <!-- Mailchimp response messages -->
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
-<section class="curriculum-section">
+<!-- Introduction Section -->
+<section class="intro-section">
   <div class="section-header">
-    <h2>Build Your AI Agent in 7 Days</h2>
-    <p class="section-intro">Transform your GitHub project into an intelligent assistant. Each day builds practical skills with hands-on exercises using your own repository.</p>
+    <h2>Why You Need This Course</h2>
+    <p class="section-intro">LLMs are smart but they don't know anything about recent developments or private codebases. Learn to solve this by building an AI agent that understands your specific GitHub project.</p>
+    <div class="value-proposition">
+      <strong>The Problem:</strong> AI can't help with what it doesn't know
+    </div>
   </div>
 
-  <div class="curriculum-timeline">
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">01</div>
-        <div class="day-content">
-          <h3 class="day-title">Ingest & Index Your Data</h3>
-          <p class="day-description">Extract docs, code, and comments from your GitHub repo</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Set up GitHub API integration to fetch repository content</li>
-          <li>Extract documentation (README, wikis, issues, comments)</li>
-          <li>Parse code files and extract meaningful information</li>
-          <li>Smart chunking strategies for different content types</li>
-          <li>Store everything in a structured, searchable format</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Your project data fully indexed and ready for search
-        </div>
+  <div class="problem-solution-grid">
+    <div class="problem-card">
+      <h4>The Challenge</h4>
+      <p>Try asking ChatGPT about a framework released in 2025, or something from your private repository. It will fail because it doesn't have access to that information.</p>
+    </div>
+    
+    <div class="solution-card">
+      <h4>Our Solution</h4>
+      <p>Build a simple search engine that can answer questions about any modern framework - directly from its GitHub repository. Make AI work with your specific codebase.</p>
+    </div>
+  </div>
+
+
+  <div class="outcome-summary">
+    <p><strong>End Result:</strong> A portfolio-ready project that showcases your AI development skills, complete with documentation, demos, deployment, and a certificate of completion to validate your expertise.</p>
+  </div>
+</section>
+
+<!-- Process Overview Section -->
+<section class="process-overview-section">
+  <div class="section-header">
+    <h2>What We will Build Together in the Next 7 Days</h2>
+    <p class="section-intro">Learn to build an AI assistant that understands your GitHub project. Through step-by-step lessons, you'll implement data ingestion, search capabilities, and intelligent reasoning to create a working AI agent.</p>
+
+  </div>
+
+  <div class="process-grid">
+    <div class="process-item">
+      <div class="process-number">1</div>
+      <h4>Day 1: Ingest and Index Your Data</h4>
+      <p class="process-intro">Extract documentation and code from any GitHub repo</p>
+      <ul class="process-actions">
+        <li>Fetch GitHub repository content</li>
+        <li>Extract documentation</li>
+        <li>Prepare data for search</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Your project data fully indexed and ready for search
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">02</div>
-        <div class="day-content">
-          <h3 class="day-title">Add Search & Make It Run</h3>
-          <p class="day-description">Implement both lexical and semantic search capabilities</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Build lexical search for exact matches and keywords</li>
-          <li>Implement semantic search using embeddings</li>
-          <li>Compare search strategies with hands-on exercises</li>
-          <li>Deploy a simple search interface</li>
-          <li>Test search quality with real queries</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Working search system you can query about your project
-        </div>
+    <div class="process-item">
+      <div class="process-number">2</div>
+      <h4>Day 2: Intelligent Processing for Data</h4>
+      <p class="process-intro">Use AI to prepare data for search</p>
+      <ul class="process-actions">
+        <li>Connect to OpenAI and alternatives</li>
+        <li>Cut and chunk</li>
+        <li>Translate repository code into English</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Your project data fully indexed and ready for search
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">03</div>
-        <div class="day-content">
-          <h3 class="day-title">Build Agentic Capabilities</h3>
-          <p class="day-description">Add reasoning and function calling for intelligent responses</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Implement reasoning chains for complex questions</li>
-          <li>Create function calling for dynamic actions</li>
-          <li>Build basic decision flows and conditionals</li>
-          <li>Add memory and context management</li>
-          <li>Handle multi-step problem solving</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Agent that can reason about your code and take actions
-        </div>
+    <div class="process-item">
+      <div class="process-number">3</div>
+      <h4>Day 3: Add Search</h4>
+      <p class="process-intro">Implement both lexical and semantic search capabilities</p>
+      <ul class="process-actions">
+        <li>Build lexical search for exact matches and keywords</li>
+        <li>Implement semantic search using embeddings</li>
+        <li>Combine them with hybrid search</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Working search system you can query about your project
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">04</div>
-        <div class="day-content">
-          <h3 class="day-title">Prompt Engineering</h3>
-          <p class="day-description">Craft and test effective prompts for better responses</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Design prompts specific to your project domain</li>
-          <li>Create system prompts for consistent behavior</li>
-          <li>Implement prompt templates and variables</li>
-          <li>A/B test different prompt strategies</li>
-          <li>Measure and improve response quality</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Optimized prompts that produce high-quality responses
-        </div>
+    <div class="process-item">
+      <div class="process-number">4</div>
+      <h4>Day 4: Agentic Search</h4>
+      <p class="process-intro">Add reasoning and function calling for intelligent responses</p>
+      <ul class="process-actions">
+        <li>Implement RAG</li>
+        <li>Defininig tools for the agent</li>
+        <li>Use Pydantic AI</li>
+        <li>Make RAG agentic</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Agent that can answer questions about your database.
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">05</div>
-        <div class="day-content">
-          <h3 class="day-title">Offline Evaluation & Navigation</h3>
-          <p class="day-description">Test, interpret, and improve before deploying</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Create evaluation datasets for your specific use case</li>
-          <li>Implement automated testing and scoring</li>
-          <li>Analyze failure cases and edge conditions</li>
-          <li>Debug and improve agent performance</li>
-          <li>Validate readiness for production deployment</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Thoroughly tested agent with performance metrics
-        </div>
+    <div class="process-item">
+      <div class="process-number">5</div>
+      <h4>Day 5: Offline Evaluation and Testing</h4>
+      <p class="process-intro">Test, interpret, and improve before deploying</p>
+      <ul class="process-actions">
+        <li>Create evaluation datasets for your specific use case</li>
+        <li>Evaluate your search</li>
+        <li>Use AI to evaluate your agenst</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Thoroughly tested agent with performance metrics
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">06</div>
-        <div class="day-content">
-          <h3 class="day-title">Publish Your Agent</h3>
-          <p class="day-description">Deploy the application with accessibility in mind</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Deploy as a web application (Streamlit, Gradio, or custom)</li>
-          <li>Create API endpoints for integration</li>
-          <li>Ensure accessibility and responsive design</li>
-          <li>Add authentication and rate limiting</li>
-          <li>Test across different devices and browsers</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Live, accessible AI agent available on the web
-        </div>
+    <div class="process-item">
+      <div class="process-number">6</div>
+      <h4>Day 6: Publish Your Agent</h4>
+      <p class="process-intro">Deploy the application with accessibility in mind</p>
+      <ul class="process-actions">
+        <li>Create UI for your agent with Streamlit</li>
+        <li>Publish it on the Internet</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Live, accessible AI agent available on the web
       </div>
     </div>
 
-    <div class="day-card-expanded">
-      <div class="day-header">
-        <div class="day-number">07</div>
-        <div class="day-content">
-          <h3 class="day-title">Share Results & Build in Public</h3>
-          <p class="day-description">Create portfolio content and share your journey</p>
-        </div>
-      </div>
-      <div class="day-details">
-        <ul class="task-list">
-          <li>Write a compelling project README with demos</li>
-          <li>Create demo videos and screenshots</li>
-          <li>Share progress on social media with #BuildingInPublic</li>
-          <li>Add to your portfolio with technical details</li>
-          <li>Get feedback from the AI development community</li>
-        </ul>
-        <div class="day-deliverable">
-          <strong>Deliverable:</strong> Portfolio-ready project with social proof and community engagement
-        </div>
+    <div class="process-item">
+      <div class="process-number">7</div>
+      <h4>Day 7: Share Results</h4>
+      <p class="process-intro">Create portfolio content and share your journey</p>
+      <ul class="process-actions">
+        <li>Write a project README</li>
+        <li>Create demo videos and screenshots</li>
+        <li>Share progress on social media</li>
+        <li>Add to your portfolio with technical details</li>
+        <li>Receive your certificate of completion</li>
+        <li>Get feedback</li>
+      </ul>
+      <div class="process-deliverable">
+        <strong>Deliverable:</strong> Portfolio-ready project with social proof, community engagement, and certificate of completion
       </div>
     </div>
   </div>
 
-  <div class="journey-summary">
-    <div class="summary-stats">
-      <div class="summary-stat">
-        <span class="stat-number">7</span>
-        <span class="stat-label">Focused Days</span>
+  <div class="process-summary">
+    <div class="stats">
+      <div class="stat">
+        <span class="number">7</span>
+        <span class="label">Focused Days</span>
       </div>
-      <div class="summary-stat">
-        <span class="stat-number">1-2h</span>
-        <span class="stat-label">Daily Time</span>
+      <div class="stat">
+        <span class="number">1-2h</span>
+        <span class="label">Daily Time</span>
       </div>
-      <div class="summary-stat">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Practical</span>
+      <div class="stat">
+        <span class="number">100%</span>
+        <span class="label">Practical</span>
       </div>
     </div>
   </div>
 </section>
 
+{% include instructor-section.html %}
 
-<div class="container">
-    <section class="benefits-section">
-        <h2>Why This Free Course Is Perfect for You</h2>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-              </svg>
-            </div>
-            <h3>Portfolio-Ready Project</h3>
-            <p>Build a real AI agent you can proudly showcase to employers and clients. Complete with documentation, demos, and deployment.</p>
-          </div>
-          
-          
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                <path d="M8 2v4M16 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 14h2M8 17h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Daily Practical Steps</h3>
-            <p>No overwhelming theory dumps. Each day brings focused, actionable tasks that build toward your final AI agent.</p>
-          </div>
-    
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M12 6V2M6 12H2M12 18v4M18 12h4" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
-              </svg>
-            </div>
-            <h3>Completely Free</h3>
-            <p>No hidden costs, no upsells during the course. Just pure value to help you start your AI development journey.</p>
-          </div>
-        </div>
-      </section>
+{% include certificate-section.html %}
 
-  <section class="overview-section">
-    <div class="section-header">
-      <h2>What You'll Build in 7 Days</h2>
-      <p class="section-intro">Transform your GitHub project into an intelligent AI agent that can understand your codebase, answer questions, and help with development tasks.</p>
-      <div class="value-proposition">
-        <strong>End Result:</strong> A portfolio-ready project showcasing modern AI techniques
-      </div>
-    </div>
+{% include inline-signup-form.html %}
 
-    <div class="capabilities-grid">
-      <div class="capability-card">
-        <div class="capability-icon">
-          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-          </svg>
-        </div>
-        <h4>Understand Your Code</h4>
-        <p>Extract and index documentation, code, and comments from any GitHub repository</p>
-      </div>
-      
-      <div class="capability-card">
-        <div class="capability-icon">
-          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M8 12h8M8 8h8M8 16h5M4 6a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H8l-4 4V6z"/>
-            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M8 12h8M8 8h8M8 16h5M4 6a2 2 0 012-2h12a2 2 0 012 2v7a2 2 0 01-2 2H8l-4 4V6z"/>
-          </svg>
-        </div>
-        <h4>Answer Questions</h4>
-        <p>Provide intelligent responses about your project using both lexical and semantic search</p>
-      </div>
-      
-      <div class="capability-card">
-        <div class="capability-icon">
-          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <h4>Make Decisions</h4>
-        <p>Use reasoning and function calling to perform tasks autonomously</p>
-      </div>
-      
-      <div class="capability-card">
-        <div class="capability-icon">
-          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <path d="M8 11l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <h4>Deploy Anywhere</h4>
-        <p>Run as a web app, API, or command-line tool</p>
-      </div>
-      
-      <div class="capability-card">
-        <div class="capability-icon">
-          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 3v18h18M7 16l4-4 4 4 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="7" cy="16" r="1" fill="currentColor"/>
-            <circle cx="11" cy="12" r="1" fill="currentColor"/>
-            <circle cx="15" cy="16" r="1" fill="currentColor"/>
-            <circle cx="21" cy="10" r="1" fill="currentColor"/>
-          </svg>
-        </div>
-        <h4>Track Performance</h4>
-        <p>Include evaluation metrics and continuous improvement capabilities</p>
-      </div>
-    </div>
-  </section>
+{% include overview-section.html %}
 
+{% include bootcamp-section.html %}
 
+{% include faq-section.html %}
 
-  <section class="bootcamp-section">
-    <h2>Ready for More? The AI Bootcamp Awaits</h2>
-    
-    <p class="section-intro">This 7-day email course is the perfect <strong>warm-up</strong> for our comprehensive <a href="https://maven.com/alexey-grigorev/from-rag-to-agents">AI Bootcamp: From RAG to Agents</a>.</p>
-
-    <div class="bootcamp-benefits">
-  <h3>After completing this free course, you'll be perfectly prepared for:</h3>
-      <ul class="benefits-list">
-    <li><strong>Advanced multi-agent systems</strong> with complex orchestration patterns</li>
-    <li><strong>Production-scale deployments</strong> with monitoring and observability</li>
-    <li><strong>Enterprise AI solutions</strong> using frameworks like OpenAI Agents SDK and PydanticAI</li>
-    <li><strong>8 weeks of live instruction</strong> with hands-on coding sessions</li>
-    <li><strong>Direct access to instructor</strong> for personalized guidance and code reviews</li>
-  </ul>
-
-      <div class="special-offer">
-        <strong>Special Offer:</strong> Email course graduates get <strong>$100 off</strong> the full AI Bootcamp enrollment!
-      </div>
-    </div>
-
-    <a href="https://maven.com/alexey-grigorev/from-rag-to-agents" class="btn btn-primary btn-lg">Learn More About the AI Bootcamp</a>
-  </section>
-
-  <hr>
-
-  <section class="instructor-section">
-    <h2>Meet Your Instructor</h2>
-
-    <div class="instructor-profile">
-      <div class="instructor-image">
-        <img src="images/Alexey-photo.jpeg" alt="Alexey Grigorev - Principal Data Scientist and AI Education Expert" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; border: 2px solid var(--border-color);">
-      </div>
-      
-      <div class="instructor-info">
-        <h3>Alexey Grigorev</h3>
-        <p class="instructor-title">Principal Data Scientist | Book Author | Instructor to 100k+ Students World-Wide</p>
-        
-        <p class="instructor-bio">Alexey Grigorev is the founder of DataTalks.Club and the creator of the popular Zoomcamp series. With <strong>15 years of experience in software engineering</strong> and over <strong>12 years in machine learning</strong>, he has built and deployed large-scale ML systems at companies like OLX Group and Simplaex.</p>
-        
-        <p class="instructor-bio">An advocate for practical, hands-on education, Alexey has taught over <strong>100,000 students</strong>, focusing on a code-first approach to help learners build real-world skills.</p>
-        
-        <div class="instructor-social-links">
-          <a href="https://www.linkedin.com/in/agrigorev/" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            LinkedIn
-          </a>
-          <a href="https://x.com/Al_Grigor" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            Twitter
-          </a>
-          <a href="https://datatalks.club/" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-            </svg>
-            DataTalks.Club
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <div class="cta-section">
-      <h2>Ready to Build Your AI Agent?</h2>
-  <p><strong>Join 1000+ developers</strong> who are already building smarter applications with AI. This free 7-day course is your fastest path from GitHub project to intelligent AI assistant.</p>
-      <a href="#mc-embedded-subscribe-form" class="btn btn-primary btn-lg">Get the Free Course</a>
-      <div class="cta-benefits">
-        ✓ 7 days of focused lessons • ✓ Build with your own project • ✓ Join the community
-      </div>
-    </div>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-  
-    <div class="faq-item">
-        <div class="faq-question">What makes this different from other AI tutorials?</div>
-      <div class="faq-answer">This course focuses on YOUR actual GitHub project, not generic examples. You'll build something meaningful and portfolio-worthy that showcases your real work. Plus, it's structured as a daily email course that fits into your busy schedule.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">How does the email course work?</div>
-      <div class="faq-answer">Each morning for 7 days, you'll receive a focused email with that day's lesson, code examples, and exercises. Each lesson takes 1-2 hours to complete. You work at your own pace, but the daily structure keeps you motivated and progressing.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">What if I don't have a GitHub project?</div>
-      <div class="faq-answer">No problem! We'll help you choose an existing open-source project that interests you, or you can use one of our suggested sample repositories. The key is learning with real code, not toy examples.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">Do I need an OpenAI API key?</div>
-      <div class="faq-answer">Yes, you'll need an OpenAI API key for the hands-on exercises. The total cost for the 7-day course is typically $3-8, depending on your project size. We'll show you how to minimize costs and use free tiers when possible.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">What technical skills do I need?</div>
-      <div class="faq-answer">Basic Python programming (functions, classes, pip install) and comfort with the command line. If you can clone a GitHub repo and run a Python script, you're ready! We'll guide you through everything else.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">How much time does each day require?</div>
-      <div class="faq-answer">Plan for 1-2 hours per day. The lessons are designed to be focused and actionable—no fluff, just practical steps toward building your AI agent. Perfect for busy professionals.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">Is there community support?</div>
-      <div class="faq-answer">Absolutely! You'll get access to our Discord server where you can ask questions, share progress, get help when stuck, and connect with other learners building their AI agents.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">What's the catch? Why is it free?</div>
-      <div class="faq-answer">No catch! This course showcases the quality of our teaching and gives you a solid foundation. If you love it and want to go deeper, you can join our comprehensive AI Bootcamp later (with a discount for email course graduates).</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">Can I do this on mobile/tablet?</div>
-      <div class="faq-answer">The emails are mobile-friendly for reading, but you'll need a computer (Mac, Windows, or Linux) to complete the coding exercises. A standard laptop is perfect—no special hardware required.</div>
-    </div>
-  
-    <div class="faq-item">
-        <div class="faq-question">What will I have at the end?</div>
-      <div class="faq-answer">A fully functional AI agent that understands your GitHub project, deployed on the web, with documentation and demos. Plus the skills and confidence to build more AI applications on your own.</div>
-    </div>
-    </section>
-  
-    <hr>
-      
-      <p class="last-updated"><em>Last updated: January 2025 • Course starts immediately after signup</em></p>
-    </div>
-  </section>
-
-</div>
+{% include post-faq-signup-form.html %}
 
 <script>
 // Smooth scroll to signup form
@@ -492,12 +238,13 @@ document.querySelectorAll('a[href="#mc-embedded-subscribe-form"]').forEach(link 
     });
 });
 
-// Enhanced Mailchimp form handling
+// Enhanced Mailchimp form handling for multiple forms
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle main form
     const successResponse = document.getElementById('mce-success-response');
     const errorResponse = document.getElementById('mce-error-response');
     
-    // Custom success handling
+    // Custom success handling for main form
     if (successResponse) {
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
@@ -510,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(successResponse, { childList: true, subtree: true });
     }
     
-    // Custom error handling
+    // Custom error handling for main form
     if (errorResponse) {
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
@@ -521,5 +268,95 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         observer.observe(errorResponse, { childList: true, subtree: true });
     }
+    
+    // Handle inline forms
+    const inlineForms = document.querySelectorAll('.signup-form.inline-signup .mc-embedded-subscribe-form');
+    
+    inlineForms.forEach(function(form, index) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const email = formData.get('EMAIL');
+            
+            // Basic email validation
+            if (!email || !email.includes('@')) {
+                showInlineMessage(form, 'error', 'Please enter a valid email address.');
+                return;
+            }
+            
+            // Submit to Mailchimp
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(function() {
+                // Show success message
+                showInlineMessage(form, 'success', '🎉 Welcome! Check your email for the first lesson.');
+                form.reset();
+            }).catch(function() {
+                // Show success message anyway (no-cors mode doesn't allow error detection)
+                showInlineMessage(form, 'success', '🎉 Welcome! Check your email for the first lesson.');
+                form.reset();
+            });
+        });
+    });
+    
+    function showInlineMessage(form, type, message) {
+        const responseContainer = form.querySelector('.clear');
+        const successEl = responseContainer.querySelector('.inline-success-response');
+        const errorEl = responseContainer.querySelector('.inline-error-response');
+        
+        // Hide both first
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+        
+        // Show appropriate message
+        if (type === 'success') {
+            successEl.innerHTML = message;
+            successEl.style.display = 'block';
+        } else {
+            errorEl.innerHTML = message;
+            errorEl.style.display = 'block';
+        }
+        
+        // Hide message after 5 seconds
+        setTimeout(function() {
+            successEl.style.display = 'none';
+            errorEl.style.display = 'none';
+        }, 5000);
+    }
+});
+
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                question.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
 });
 </script>
