@@ -1,0 +1,350 @@
+<style>
+/* Curriculum Section Styles */
+.curriculum {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.curriculum .section-header,
+.curriculum .timeline {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.curriculum .section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.curriculum h2 {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-dark);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.025em;
+}
+
+.curriculum .intro {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.day-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.day-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary-color);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.day-card:hover::before {
+  background: var(--primary-dark);
+  width: 6px;
+}
+
+.day-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.day-number {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 2px solid var(--primary-color);
+}
+
+.day-info {
+  flex: 1;
+}
+
+.day-info h3 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--leading-tight);
+}
+
+.day-info p {
+  font-size: var(--text-base);
+  color: var(--text-medium);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0;
+}
+
+.day-details {
+  padding-left: calc(50px + var(--spacing-lg));
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.tasks li {
+  padding: var(--spacing-sm) 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--text-medium);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tasks li:last-child {
+  border-bottom: none;
+}
+
+.tasks li:hover {
+  color: var(--text-dark);
+  background: var(--bg-light);
+  margin: 0 calc(-1 * var(--spacing-sm));
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+.deliverable {
+  background: var(--success-light);
+  border: 1px solid rgba(92, 184, 92, 0.3);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  color: var(--text-dark);
+}
+
+.deliverable strong {
+  color: var(--success-color);
+}
+
+.summary {
+  margin-top: var(--spacing-3xl);
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+}
+
+.stats {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2xl);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat .number {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: var(--leading-tight);
+}
+
+.stat .label {
+  font-size: var(--text-sm);
+  color: var(--text-medium);
+  font-weight: 500;
+  margin-top: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+  .curriculum {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  
+  .curriculum h2 {
+    font-size: var(--text-2xl);
+    text-align: center;
+  }
+  
+  .curriculum .intro {
+    font-size: var(--text-base);
+    text-align: center;
+  }
+  
+  .timeline {
+    gap: var(--spacing-md);
+  }
+  
+  .day-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .day-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .day-number {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-base);
+    margin: 0 auto;
+  }
+  
+  .day-info {
+    text-align: center;
+  }
+  
+  .day-info h3 {
+    font-size: var(--text-lg);
+    text-align: center;
+  }
+  
+  .day-info p {
+    text-align: center;
+  }
+  
+  .day-details {
+    padding-left: 0;
+    margin-top: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .tasks li {
+    text-align: center;
+    font-size: var(--text-sm);
+  }
+  
+  .deliverable {
+    text-align: center;
+    font-size: var(--text-sm);
+  }
+  
+  .summary {
+    padding: var(--spacing-2xl) var(--spacing-md);
+    text-align: center;
+  }
+  
+  .stats {
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .curriculum {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+  
+  .curriculum h2 {
+    font-size: var(--text-xl);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .curriculum .intro {
+    font-size: var(--text-sm);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .timeline {
+    gap: var(--spacing-sm);
+  }
+  
+  .day-card {
+    padding: var(--spacing-md);
+  }
+  
+  .day-number {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-sm);
+  }
+  
+  .day-info h3 {
+    font-size: var(--text-base);
+    text-align: center;
+  }
+  
+  .day-info p {
+    font-size: var(--text-sm);
+    text-align: center;
+  }
+  
+  .tasks li {
+    font-size: var(--text-xs);
+    text-align: center;
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .deliverable {
+    font-size: var(--text-xs);
+    text-align: center;
+    padding: var(--spacing-sm);
+  }
+  
+  .summary {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+  }
+  
+  .stat .number {
+    font-size: var(--text-xl);
+  }
+  
+  .stat .label {
+    font-size: var(--text-xs);
+  }
+}
+</style>

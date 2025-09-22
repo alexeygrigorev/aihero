@@ -1,0 +1,138 @@
+<div class="architecture-section">
+  <div class="section-header">
+    <h3>System Architecture</h3>
+    <p class="section-intro">See how your AI agent processes and understands your GitHub repository</p>
+  </div>
+  
+  <div class="architecture-diagram">
+    <svg viewBox="0 0 800 300" class="diagram-svg">
+      <!-- Background -->
+      <defs>
+        <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.1" />
+          <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:0.3" />
+        </linearGradient>
+        
+        <!-- Arrow marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2" />
+        </marker>
+      </defs>
+      
+      <!-- Flow background -->
+      <rect x="0" y="80" width="800" height="140" fill="url(#flowGradient)" rx="20"/>
+      
+      <!-- Step 1: GitHub Repository -->
+      <g class="diagram-step" transform="translate(50, 100)">
+        <circle cx="40" cy="40" r="35" fill="#24292e" stroke="#fff" stroke-width="3"/>
+        <path d="M40 20 C50 20, 60 30, 60 40 C60 50, 50 60, 40 60 C30 60, 20 50, 20 40 C20 30, 30 20, 40 20 Z M35 35 L35 45 L45 45 L45 35 Z M30 30 L30 50 L50 50 L50 30 Z" fill="white"/>
+        <text x="40" y="70" text-anchor="middle" class="step-label">GitHub Repo</text>
+      </g>
+      
+      <!-- Arrow 1 -->
+      <line x1="125" y1="140" x2="175" y2="140" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)"/>
+      
+      <!-- Step 2: AI Processing -->
+      <g class="diagram-step" transform="translate(175, 100)">
+        <circle cx="40" cy="40" r="35" fill="#00a67e" stroke="#fff" stroke-width="3"/>
+        <path d="M25 25 Q40 15, 55 25 Q50 40, 40 45 Q30 40, 25 25 Z M35 30 C35 35, 40 35, 40 30 M40 35 L40 40 M45 30 C45 35, 50 35, 50 30" fill="white"/>
+        <text x="40" y="70" text-anchor="middle" class="step-label">AI Processing</text>
+      </g>
+      
+      <!-- Arrow 2 -->
+      <line x1="250" y1="140" x2="300" y2="140" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)"/>
+      
+      <!-- Step 3: Vector Database -->
+      <g class="diagram-step" transform="translate(300, 100)">
+        <circle cx="40" cy="40" r="35" fill="#ff6b6b" stroke="#fff" stroke-width="3"/>
+        <rect x="25" y="25" width="30" height="30" fill="none" stroke="white" stroke-width="2"/>
+        <circle cx="30" cy="30" r="2" fill="white"/>
+        <circle cx="40" cy="35" r="2" fill="white"/>
+        <circle cx="50" cy="45" r="2" fill="white"/>
+        <circle cx="35" cy="50" r="2" fill="white"/>
+        <text x="40" y="70" text-anchor="middle" class="step-label">Vector DB</text>
+      </g>
+      
+      <!-- Arrow 3 -->
+      <line x1="375" y1="140" x2="425" y2="140" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)"/>
+      
+      <!-- Step 4: RAG Agent -->
+      <g class="diagram-step" transform="translate(425, 100)">
+        <circle cx="40" cy="40" r="35" fill="#9b59b6" stroke="#fff" stroke-width="3"/>
+        <circle cx="35" cy="35" r="3" fill="white"/>
+        <circle cx="45" cy="35" r="3" fill="white"/>
+        <path d="M30 50 Q40 45, 50 50" stroke="white" stroke-width="2" fill="none"/>
+        <rect x="25" y="25" width="30" height="8" fill="white" opacity="0.8"/>
+        <text x="40" y="70" text-anchor="middle" class="step-label">RAG Agent</text>
+      </g>
+      
+      <!-- Arrow 4 -->
+      <line x1="500" y1="140" x2="550" y2="140" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)"/>
+      
+      <!-- Step 5: Streamlit UI -->
+      <g class="diagram-step" transform="translate(550, 100)">
+        <circle cx="40" cy="40" r="35" fill="#ff4b4b" stroke="#fff" stroke-width="3"/>
+        <rect x="25" y="25" width="30" height="20" fill="white" rx="2"/>
+        <rect x="27" y="27" width="26" height="3" fill="#ff4b4b"/>
+        <rect x="27" y="32" width="20" height="2" fill="#ddd"/>
+        <rect x="27" y="36" width="15" height="2" fill="#ddd"/>
+        <rect x="27" y="40" width="18" height="2" fill="#ddd"/>
+        <text x="40" y="70" text-anchor="middle" class="step-label">Streamlit UI</text>
+      </g>
+      
+      <!-- Data flow labels -->
+      <text x="150" y="125" text-anchor="middle" class="flow-label">Fetch</text>
+      <text x="275" y="125" text-anchor="middle" class="flow-label">Chunk</text>
+      <text x="400" y="125" text-anchor="middle" class="flow-label">Search</text>
+      <text x="525" y="125" text-anchor="middle" class="flow-label">Chat</text>
+      
+      <!-- Technology labels -->
+      <text x="90" y="50" text-anchor="middle" class="tech-label">GitHub API</text>
+      <text x="215" y="50" text-anchor="middle" class="tech-label">OpenAI</text>
+      <text x="340" y="50" text-anchor="middle" class="tech-label">Embeddings</text>
+      <text x="465" y="50" text-anchor="middle" class="tech-label">Pydantic AI</text>
+      <text x="590" y="50" text-anchor="middle" class="tech-label">Streamlit</text>
+    </svg>
+  </div>
+  
+  <div class="architecture-details">
+    <div class="detail-grid">
+      <div class="detail-item">
+        <div class="detail-number">1</div>
+        <div class="detail-content">
+          <h4>Repository Ingestion</h4>
+          <p>Extract code, documentation, and metadata using GitHub API</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-number">2</div>
+        <div class="detail-content">
+          <h4>AI-Powered Processing</h4>
+          <p>Chunk content intelligently and translate code to natural language</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-number">3</div>
+        <div class="detail-content">
+          <h4>Vector Storage</h4>
+          <p>Create searchable embeddings for semantic understanding</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-number">4</div>
+        <div class="detail-content">
+          <h4>Agentic RAG</h4>
+          <p>Combine retrieval with reasoning for intelligent responses</p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-number">5</div>
+        <div class="detail-content">
+          <h4>User Interface</h4>
+          <p>Deploy accessible web application for easy interaction</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
