@@ -89,128 +89,37 @@ description: Learn to build a production-ready AI agent for your GitHub project 
 <!-- Process Overview Section -->
 <section class="process-overview-section">
   <div class="section-header">
-    <h2>What We Will Build Together In The Next 7 Days</h2>
-    <p class="section-intro">Learn to build an AI assistant that understands your GitHub project. Through step-by-step lessons, you'll implement data ingestion, search capabilities, and intelligent reasoning to create a working AI agent.</p>
+    <h2>{{ site.data.index.curriculum.title }}</h2>
+    <p class="section-intro">{{ site.data.index.curriculum.intro }}</p>
 
   </div>
 
   <div class="process-grid">
+    {% for day in site.data.index.curriculum.days %}
     <div class="process-item">
-      <div class="process-number">1</div>
-      <h4>Day 1: Ingest and Index Your Data</h4>
-      <p class="process-intro">Extract documentation and code from any GitHub repo</p>
+      <div class="process-number">{{ day.number }}</div>
+      <h4>Day {{ day.number }}: {{ day.title }}</h4>
+      <p class="process-intro">{{ day.description }}</p>
       <ul class="process-actions">
-        <li>Fetch GitHub repository content</li>
-        <li>Extract documentation</li>
-        <li>Prepare data for search</li>
+        {% for task in day.tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
       </ul>
       <div class="process-deliverable">
-        <strong>Deliverable:</strong> Your project data downloaded and ready to be processed 
+        <strong>Deliverable:</strong> {{ day.deliverable }}
       </div>
     </div>
-
-    <div class="process-item">
-      <div class="process-number">2</div>
-      <h4>Day 2: Intelligent Processing for Data</h4>
-      <p class="process-intro">Use AI to prepare data for search</p>
-      <ul class="process-actions">
-        <li>Cut and chunk your data for better search</li>
-        <li>Split big documents using paragraphs and sections</li>
-        <li>Apply intelligent chunking with AI</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Your project data fully processed and ready for search
-      </div>
-    </div>
-
-    <div class="process-item">
-      <div class="process-number">3</div>
-      <h4>Day 3: Add Search</h4>
-      <p class="process-intro">Implement both lexical and semantic search capabilities</p>
-      <ul class="process-actions">
-        <li>Build lexical search for exact matches and keywords</li>
-        <li>Implement semantic search using embeddings</li>
-        <li>Combine them with hybrid search</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Working search system you can query about your project
-      </div>
-    </div>
-
-    <div class="process-item">
-      <div class="process-number">4</div>
-      <h4>Day 4: Agentic Search</h4>
-      <p class="process-intro">Add reasoning and function calling for intelligent responses</p>
-      <ul class="process-actions">
-        <li>Implement RAG</li>
-        <li>Defininig tools for the agent</li>
-        <li>Use Pydantic AI</li>
-        <li>Make RAG agentic</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Agent that can answer questions about your database.
-      </div>
-    </div>
-
-    <div class="process-item">
-      <div class="process-number">5</div>
-      <h4>Day 5: Offline Evaluation and Testing</h4>
-      <p class="process-intro">Test, interpret, and improve before deploying</p>
-      <ul class="process-actions">
-        <li>Create evaluation datasets for your specific use case</li>
-        <li>Evaluate your search</li>
-        <li>Use AI to evaluate your agenst</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Thoroughly tested agent with performance metrics
-      </div>
-    </div>
-
-    <div class="process-item">
-      <div class="process-number">6</div>
-      <h4>Day 6: Publish Your Agent</h4>
-      <p class="process-intro">Deploy the application with accessibility in mind</p>
-      <ul class="process-actions">
-        <li>Create UI for your agent with Streamlit</li>
-        <li>Publish it on the Internet</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Live, accessible AI agent available on the web
-      </div>
-    </div>
-
-    <div class="process-item">
-      <div class="process-number">7</div>
-      <h4>Day 7: Share Results</h4>
-      <p class="process-intro">Create portfolio content and share your journey</p>
-      <ul class="process-actions">
-        <li>Write a project README</li>
-        <li>Create demo videos and screenshots</li>
-        <li>Share progress on social media</li>
-        <li>Add to your portfolio with technical details</li>
-        <li>Receive your certificate of completion</li>
-        <li>Get feedback</li>
-      </ul>
-      <div class="process-deliverable">
-        <strong>Deliverable:</strong> Portfolio-ready project with social proof, community engagement, and certificate of completion
-      </div>
-    </div>
+    {% endfor %}
   </div>
 
   <div class="process-summary">
     <div class="stats">
+      {% for stat in site.data.index.curriculum.summary_stats %}
       <div class="stat">
-        <span class="number">7</span>
-        <span class="label">Focused Days</span>
+        <span class="number">{{ stat.number }}</span>
+        <span class="label">{{ stat.label }}</span>
       </div>
-      <div class="stat">
-        <span class="number">1-2h</span>
-        <span class="label">Daily Time</span>
-      </div>
-      <div class="stat">
-        <span class="number">100%</span>
-        <span class="label">Practical</span>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
