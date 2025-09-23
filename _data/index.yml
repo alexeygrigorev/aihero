@@ -1,0 +1,78 @@
+curriculum:
+  title: "What We Will Build Together In The Next 7 Days"
+  intro: "Learn to build an AI assistant that understands your GitHub project. Through step-by-step lessons, you'll implement data ingestion, search capabilities, and intelligent reasoning to create a working AI agent."
+  
+  days:
+    - number: 1
+      title: "Ingest and Index Your Data"
+      description: "Extract documentation and code from any GitHub repo"
+      tasks:
+        - "Fetch GitHub repository content"
+        - "Extract documentation"
+        - "Prepare data for search"
+      deliverable: "Your project data downloaded and ready to be processed"
+      
+    - number: 2
+      title: "Intelligent Processing for Data"
+      description: "Use AI to prepare data for search"
+      tasks:
+        - "Cut and chunk your data for better search"
+        - "Split big documents using paragraphs and sections"
+        - "Apply intelligent chunking with AI"
+      deliverable: "Your project data fully processed and ready for search"
+      
+    - number: 3
+      title: "Add Search"
+      description: "Implement both lexical and semantic search capabilities"
+      tasks:
+        - "Build lexical search for exact matches and keywords"
+        - "Implement semantic search using embeddings"
+        - "Combine them with hybrid search"
+      deliverable: "Working search system you can query about your project"
+      
+    - number: 4
+      title: "Agentic Search"
+      description: "Add reasoning and function calling for intelligent responses"
+      tasks:
+        - "Implement RAG"
+        - "Defininig tools for the agent"
+        - "Use Pydantic AI"
+        - "Make RAG agentic"
+      deliverable: "Agent that can answer questions about your database."
+      
+    - number: 5
+      title: "Offline Evaluation and Testing"
+      description: "Test, interpret, and improve before deploying"
+      tasks:
+        - "Create evaluation datasets for your specific use case"
+        - "Evaluate your search"
+        - "Use AI to evaluate your agenst"
+      deliverable: "Thoroughly tested agent with performance metrics"
+      
+    - number: 6
+      title: "Publish Your Agent"
+      description: "Deploy the application with accessibility in mind"
+      tasks:
+        - "Create UI for your agent with Streamlit"
+        - "Publish it on the Internet"
+      deliverable: "Live, accessible AI agent available on the web"
+      
+    - number: 7
+      title: "Share Results"
+      description: "Create portfolio content and share your journey"
+      tasks:
+        - "Write a project README"
+        - "Create demo videos and screenshots"
+        - "Share progress on social media"
+        - "Add to your portfolio with technical details"
+        - "Receive your certificate of completion"
+        - "Get feedback"
+      deliverable: "Portfolio-ready project with social proof, community engagement, and certificate of completion"
+  
+  summary_stats:
+    - number: "7"
+      label: "Focused Days"
+    - number: "1-2h"
+      label: "Daily Time"
+    - number: "100%"
+      label: "Practical"
