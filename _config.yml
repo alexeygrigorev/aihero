@@ -16,7 +16,17 @@ github_username: "alexeygrigorev"
 
 # SEO and social sharing
 image: "/images/logo.png"  # Default social preview image
-favicon: "/images/favicon.png"             # Site logo
+logo: "/images/logo.png"   # Site logo (used by jekyll-seo-tag)
+social:
+  name: "Alexey Grigorev"
+  links:
+    - "https://twitter.com/AlexeyGrigorev"
+    - "https://github.com/alexeygrigorev"
+twitter:
+  username: "AlexeyGrigorev"
+  card: summary_large_image
+lang: en_US
+favicon: "/images/favicon.png"             # Site favicon
 
 # Sass/SCSS
 sass:
