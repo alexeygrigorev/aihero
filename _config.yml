@@ -14,6 +14,10 @@ email: "alexey@datatalks.club"
 twitter_username: "AlexeyGrigorev"
 github_username: "alexeygrigorev"
 
+# SEO and social sharing
+image: "/images/logo.png"  # Default social preview image
+favicon: "/images/favicon.png"             # Site logo
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
