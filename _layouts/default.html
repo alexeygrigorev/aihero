@@ -83,17 +83,17 @@
     <link rel="dns-prefetch" href="https://pythoninvest.com">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="64x64" href="{{ '/images/favicon64.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon64.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon64.png' | relative_url }}">
-    <link rel="shortcut icon" href="{{ '/images/favicon64.png' | relative_url }}">
-    <link rel="icon" href="{{ '/images/favicon64.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ '/images/favicon64.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon64.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon64.png' | absolute_url }}">
+    <link rel="shortcut icon" href="{{ '/images/favicon64.png' | absolute_url }}">
+    <link rel="icon" href="{{ '/images/favicon64.png' | absolute_url }}">
     
     <!-- Meta tags for better performance -->
     <meta name="theme-color" content="#2563eb">
@@ -107,6 +107,6 @@
 </head>
 <body>
     {{ content }}
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/main.js' | absolute_url }}" defer></script>
 </body>
 </html>
