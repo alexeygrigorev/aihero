@@ -7,6 +7,73 @@
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
     
+    <!-- SEO Tag Plugin -->
+    {% seo %}
+    
+    <!-- Additional Social Sharing and SEO Meta Tags -->
+    {% assign page_image = page.image | default: site.image | default: "/images/logo.png" %}
+    {% assign page_url = page.url | absolute_url %}
+    {% assign page_title = page.title | default: site.title %}
+    {% assign page_description = page.description | default: site.description %}
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page_url }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:image" content="{{ page_image | absolute_url }}">
+    <meta property="og:image:secure_url" content="{{ page_image | absolute_url }}">
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="{{ site.author }}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ page_url }}">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    <meta name="twitter:image" content="{{ page_image | absolute_url }}">
+    <meta name="twitter:image:alt" content="AI Hero - {{ page_title }}">
+    {% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}">{% endif %}
+    {% if site.twitter_username %}<meta name="twitter:creator" content="@{{ site.twitter_username }}">{% endif %}
+    
+    <!-- LinkedIn -->
+    <meta property="linkedin:owner" content="{{ site.title }}">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="publisher" content="{{ site.author }}">
+    <link rel="canonical" href="{{ page_url }}">
+    
+    <!-- Rich Snippets / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "{{ page_title }}",
+      "description": "{{ page_description }}",
+      "image": "{{ page_image | absolute_url }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}"
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}"
+      },
+      "url": "{{ page_url }}",
+      "courseMode": "online",
+      "educationalLevel": "intermediate"
+    }
+    </script>
+    
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,11 +90,17 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}">
-<link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
     
     <!-- Meta tags for better performance -->
     <meta name="theme-color" content="#2563eb">
     <meta name="color-scheme" content="light">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="msapplication-TileImage" content="{{ '/images/logo.png' | absolute_url }}">
 </head>
 <body>
     {{ content }}
