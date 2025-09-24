@@ -1,8 +1,8 @@
 # Site settings
 title: "AI Bootcamp: From RAG to Agents"
 description: "Master AI systems from Retrieval-Augmented Generation to intelligent agents in this comprehensive hands-on course"
-baseurl: "/aihero"
-url: "https://alexeygrigorev.com"
+baseurl: ""
+url: "https://alexeygrigorev.com/aihero"
 
 # Build settings
 markdown: kramdown
