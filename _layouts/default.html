@@ -16,7 +16,7 @@
     {% assign page_title = page.title | default: site.title %}
     {% assign page_description = page.description | default: site.description %}
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook - Uses correct canonical URL structure -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page_url }}">
     <meta property="og:title" content="{{ page_title }}">
@@ -48,6 +48,7 @@
     <meta name="googlebot" content="index, follow">
     <meta name="author" content="{{ site.author }}">
     <meta name="publisher" content="{{ site.author }}">
+    <!-- Canonical URL - Ensures proper indexing with correct URL structure -->
     <link rel="canonical" href="{{ page_url }}">
     
     <!-- Rich Snippets / Schema.org -->
@@ -88,8 +89,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ '/images/favicon.png' | relative_url }}">
+    <!-- Favicon - Updated to use optimized 32x32 favicon for better browser tab display -->
+    <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}">
     <link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}">
     
     <!-- Meta tags for better performance -->
