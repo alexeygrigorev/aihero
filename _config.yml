@@ -1,8 +1,8 @@
 # Site settings
 title: "AI Bootcamp: From RAG to Agents"
 description: "Master AI systems from Retrieval-Augmented Generation to intelligent agents in this comprehensive hands-on course"
-baseurl: ""
-url: "https://alexeygrigorev.github.io/aihero"
+baseurl: "/aihero"
+url: "https://alexeygrigorev.com"
 
 # Build settings
 markdown: kramdown
@@ -11,7 +11,7 @@ highlighter: rouge
 # Site configuration
 author: "Alexey Grigorev"
 email: "alexey@datatalks.club"
-twitter_username: "AlexeyGrigorev"
+twitter_username: "Al_Grigor"
 github_username: "alexeygrigorev"
 
 # SEO and social sharing
@@ -20,19 +20,19 @@ logo: "/images/logo.png"   # Site logo (used by jekyll-seo-tag)
 social:
   name: "Alexey Grigorev"
   links:
-    - "https://twitter.com/AlexeyGrigorev"
+    - "https://twitter.com/Al_Grigor"
     - "https://github.com/alexeygrigorev"
 twitter:
-  username: "AlexeyGrigorev"
+  username: "Al_Grigor"
   card: summary_large_image
 lang: en_US
-favicon: "/images/favicon.png"             # Site favicon
+favicon: "/images/favicon64.png"           # Site favicon
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
-  sourcemap: :always
+  sourcemap: development
 
 plugins:
   - jekyll-feed
