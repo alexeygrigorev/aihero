@@ -13,9 +13,9 @@ help:
 install:
 	bundle install
 
-# Serve the site locally with live reload
+# Serve the site locally
 serve:
-	bundle exec jekyll serve --livereload --open-url
+	bundle exec jekyll serve
 
 # Build the site for production
 build:
@@ -24,7 +24,3 @@ build:
 # Clean build artifacts
 clean:
 	bundle exec jekyll clean
-
-# Development server without live reload (for compatibility)
-dev:
-	bundle exec jekyll serve
