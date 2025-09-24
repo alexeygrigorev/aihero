@@ -2,7 +2,7 @@
 title: "AI Bootcamp: From RAG to Agents"
 description: "Master AI systems from Retrieval-Augmented Generation to intelligent agents in this comprehensive hands-on course"
 baseurl: ""
-url: "https://alexeygrigorev.com/aihero"
+url: "https://alexeygrigorev.com"
 
 # Build settings
 markdown: kramdown
