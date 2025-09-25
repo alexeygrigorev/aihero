@@ -31,13 +31,12 @@ curriculum:
       deliverable: "Working search system you can query about your project"
       
     - number: 4
-      title: "Agentic Search"
+      title: "Agents and tools"
       description: "Add reasoning and function calling for intelligent responses"
       tasks:
-        - "Implement RAG"
-        - "Defininig tools for the agent"
-        - "Use Pydantic AI"
-        - "Make RAG agentic"
+        - "Use OpenAI API to function calling"
+        - "Definine tools for the agent"
+        - "BUild agents with Pydantic AI"
       deliverable: "Agent that can answer questions about your database."
       
     - number: 5
