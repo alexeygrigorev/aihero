@@ -1,0 +1,140 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "Is it possible to take this data engineering course without using cloud services like GCP, and what can I do locally?",
+          "timestamp": "2025-09-28T10:31:42.463289+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"take course without cloud services\"}",
+          "tool_call_id": "call_4ngqYDeVEEz72hFCwtDphORj",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 226,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 17,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-09-28T10:31:46+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CKiywRiXQMmbPa3LKmubJsTfD4WdP",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "e7738f47c8",
+              "question": "Should I pay for cloud services?",
+              "sort_order": 28,
+              "content": "It's not mandatory. You can take advantage of their free trial.",
+              "filename": "_questions/data-engineering-zoomcamp/general/028_e7738f47c8_should-i-pay-for-cloud-services.md"
+            },
+            {
+              "id": "77a076baa3",
+              "question": "Environment: The GCP and other cloud providers are unavailable in some countries. Is it possible to provide a guide to installing a home lab?",
+              "sort_order": 29,
+              "content": "You can do most of the course without a cloud. Almost everything we use (excluding BigQuery) can be run locally. We won\u2019t be able to provide guidelines for some things, but most of the materials are runnable without GCP.\n\nFor everything in the course, there\u2019s a local alternative. You could even do the whole course locally. Note that Homework 3 requires BigQuery.",
+              "filename": "_questions/data-engineering-zoomcamp/general/029_77a076baa3_environment-the-gcp-and-other-cloud-providers-are.md"
+            },
+            {
+              "id": "c207b8614e",
+              "question": "Course: Can I get support if I take the course in the self-paced mode?",
+              "sort_order": 9,
+              "content": "Yes, the Slack channel remains open and you can ask questions there. However, always search the channel first and check the FAQ, as most likely your questions are already answered here.\n\nYou can also tag the bot `@ZoomcampQABot` to help you conduct the search, but don\u2019t rely on its answers 100%.",
+              "filename": "_questions/data-engineering-zoomcamp/general/009_c207b8614e_course-can-i-get-support-if-i-take-the-course-in-t.md"
+            },
+            {
+              "id": "16005581f2",
+              "question": "Edit Course Profile.",
+              "sort_order": 13,
+              "content": "The display name listed on the leaderboard is an auto-generated randomized name. You can edit it to be a nickname or your real name if you prefer. Your entry on the Leaderboard is the one highlighted in light green.\n\nThe Certificate name should be your actual name that you want to appear on your certificate after completing the course.\n\nThe \"Display on Leaderboard\" option indicates whether you want your name to be listed on the course leaderboard.",
+              "filename": "_questions/data-engineering-zoomcamp/general/013_16005581f2_edit-course-profile.md"
+            },
+            {
+              "id": "9e508f2212",
+              "question": "Course: When does the course start?",
+              "sort_order": 1,
+              "content": "The next cohort starts January 13th, 2025. More info at [DTC](https://datatalks.club/blog/guide-to-free-online-courses-at-datatalks-club.html).\n\n- Register before the course starts using this [link](https://airtable.com/shr6oVXeQvSI5HuWD).\n- Join the [course Telegram channel with announcements](https://t.me/dezoomcamp).\n- Don\u2019t forget to register in DataTalks.Club's Slack and join the channel.",
+              "filename": "_questions/data-engineering-zoomcamp/general/001_9e508f2212_course-when-does-the-course-start.md"
+            }
+          ],
+          "tool_call_id": "call_4ngqYDeVEEz72hFCwtDphORj",
+          "metadata": null,
+          "timestamp": "2025-09-28T10:31:44.044596+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "Yes, it is possible to take the data engineering course without using cloud services like GCP. You can run most of the course materials locally, as everything except for BigQuery can be executed on your local machine. \n\nHowever, please note that Homework 3 specifically requires the use of BigQuery, so that part would need to be addressed through GCP or an alternative setup.\n\nFor more information, you may refer to the relevant document: [Environment: The GCP and other cloud providers](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/general/029_77a076baa3_environment-the-gcp-and-other-cloud-providers-are.md).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 926,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 142,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-09-28T10:31:48+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-CKiyyoGRkt6f7qbZA40M4Ym2KVyxC",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "ai-generated"
+}

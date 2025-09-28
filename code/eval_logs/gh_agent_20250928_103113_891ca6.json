@@ -1,0 +1,140 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "What are the different methods for setting up credentials for `dlt` in my project?",
+          "timestamp": "2025-09-28T10:31:08.702927+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"set up credentials for dlt\"}",
+          "tool_call_id": "call_qICyPnq8h3zaSc9UgGGhsP9P",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 220,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-09-28T10:31:12+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CKiyO7A08u4gmnb4nXcoqxRWK1Tkn",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "d2add610e3",
+              "question": "How do I set up credentials to run dlt in my environment (not Google Colab)?",
+              "sort_order": 9,
+              "content": "You can set up credentials for `dlt` in several ways. Here are the two most common methods:\n\n### Environment Variables (Easiest)\n\nSet credentials via environment variables. For example, to configure Google Cloud credentials. This method avoids hardcoding secrets in your code and works seamlessly with most environments.\n\n### Configuration Files (Recommended for Local Use)\n\n- Use `.dlt/secrets.toml` for sensitive credentials and `.dlt/config.toml` for non-sensitive configurations.\n- Example for Google Cloud in `secrets.toml`:\n\n```toml\n[google_cloud]\nservice_account_key = \"YOUR_SERVICE_ACCOUNT_KEY\"\n```\n\n- Place these files in the `.dlt` folder of your project.\n\n### Additional Notes:\n\n- Never commit `secrets.toml` to version control (add it to `.gitignore`).\n- Credentials can also be loaded via vaults, AWS Parameter Store, or custom setups.\n\nFor additional methods and detailed information, refer to the [official dlt documentation](https://dlthub.com/docs/general-usage/credentials/)",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/009_d2add610e3_how-do-i-set-up-credentials-to-run-dlt-in-my-envir.md"
+            },
+            {
+              "id": "d7abe28e77",
+              "question": "Which set-up should I use for my dlt homework?",
+              "sort_order": 2,
+              "content": "Technically you can use any code editor or Jupyter Notebook, as long as you can run dbt and answer the homework questions. A lot of code is provided by the instructor on the homework page to give you a head start in the right direction: [dlt Homework Instructions](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/workshops/dlt/dlt_homework.md).\n\nThe most practical way is to use the provided Colabs Jupyter notebook called \u2018dlt - Homework.ipynb\u2019 which you can find here: [Colab Notebook](https://colab.research.google.com/drive/1plqdl33K_HkVx0E0nGJrrkEUssStQsW7#scrollTo=BtsSxtFfXQs3) since all of the provided code is applicable in the Colabs set-up.",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/002_d7abe28e77_which-set-up-should-i-use-for-my-dlt-homework.md"
+            },
+            {
+              "id": "eaae17dfea",
+              "question": "Embedding dlt into Kestra",
+              "sort_order": 12,
+              "content": "```yaml\nid: dlt_ingestion\n\nnamespace: my.dlt\n\ndescription: \"Run dlt pipeline with Kestra\"\n\ntasks:\n\n- id: run_dlt\n\n  type: io.kestra.plugin.scripts.python.Commands\n\n  commands:\n\n  - |\n\n    import dlt\n\n    from my_dlt_pipeline import load_data  # Import your dlt function\n\n    pipeline = dlt.pipeline(\n\n      pipeline_name=\"kestra_pipeline\",\n\n      destination=\"duckdb\",\n\n      dataset_name=\"kestra_dataset\"\n\n    )\n\n    info = pipeline.run(load_data())\n\n    print(info)\n```",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/012_eaae17dfea_embedding-dlt-into-kestra.md"
+            },
+            {
+              "id": "1075e9e2b6",
+              "question": "Make DLT comply with the XDG Base Dir Specification",
+              "sort_order": 10,
+              "content": "You can set the environment variable in your shell init script:\n\nFor Bash or ZSH:\n\n```bash\nexport DLT_DATA_DIR=$XDG_DATA_HOME/dlt\n```\n\nFor Fish (in `config.fish`):\n\n```bash\nset -x DLT_DATA_DIR \"$XDG_DATA_HOME/dlt\"\n```",
+              "filename": "_questions/data-engineering-zoomcamp/workshop-1-dlthub/010_1075e9e2b6_make-dlt-comply-with-the-xdg-base-dir-specificatio.md"
+            },
+            {
+              "id": "9ef838bb46",
+              "question": "Docker: Compose up -d error getting credentials - err: exec: \"docker-credential-desktop\": executable file not found in %PATH%, out: ``",
+              "sort_order": 49,
+              "content": "To resolve this error, follow these steps:\n\n1. Locate the `config.json` file for Docker, typically found in your home directory at `Users/username/.docker`.\n2. Modify the `credsStore` setting to `credStore`.\n3. Save the file and re-run your Docker Compose command.",
+              "filename": "_questions/data-engineering-zoomcamp/module-1/049_9ef838bb46_docker-compose-up-d-error-getting-credentials-err.md"
+            }
+          ],
+          "tool_call_id": "call_qICyPnq8h3zaSc9UgGGhsP9P",
+          "metadata": null,
+          "timestamp": "2025-09-28T10:31:09.504406+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.  \n\nUse the search tool to find relevant information from the course materials before answering questions.  \n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "You can set up credentials for `dlt` in your project using several methods. Here are the most common ones:\n\n### 1. Environment Variables (Easiest)\n   - This method allows you to set credentials via environment variables, which is a secure way to avoid hardcoding sensitive information in your code. For example, you can configure Google Cloud credentials by setting specific environment variables.\n\n### 2. Configuration Files (Recommended for Local Use)\n   - You can use `.dlt/secrets.toml` for sensitive credentials and `.dlt/config.toml` for non-sensitive configurations. \n   - An example for Google Cloud in `secrets.toml` might look like this:\n     ```toml\n     [google_cloud]\n     service_account_key = \"YOUR_SERVICE_ACCOUNT_KEY\"\n     ```\n   - Make sure to place these files in the `.dlt` folder of your project and never commit `secrets.toml` to version control (add it to `.gitignore`).\n\n### Additional Methods\n   - Credentials can also be stored and loaded from external sources such as vaults, AWS Parameter Store, or through custom configurations.\n\nFor detailed information, you may refer to the official documentation on setting up credentials: [dlt Credentials Documentation](https://dlthub.com/docs/general-usage/credentials/) [LINK TITLE](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/workshop-1-dlthub/009_d2add610e3_how-do-i-set-up-credentials-to-run-dlt-in-my-envir.md).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1347,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 325,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-09-28T10:31:13+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-CKiyPsiveZCEm3s4z9OACvRX4Ju6W",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "ai-generated"
+}
