@@ -1,0 +1,14 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "minsearch==0.0.5",
+    "openai>=1.108.2",
+    "pydantic-ai==1.0.9",
+    "python-frontmatter>=1.1.0",
+    "requests>=2.32.5",
+    "streamlit>=1.50.0",
+]
