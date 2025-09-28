@@ -5,23 +5,32 @@ import logs
 import asyncio
 
 
-def main():
-    repo_owner = "DataTalksClub"
-    repo_name = "faq"
+REPO_OWNER = "DataTalksClub"
+REPO_NAME = "faq"
 
-    print(f"Starting AI FAQ Assistant for {repo_owner}/{repo_name}")
+
+def initialize_index():
+    print(f"Starting AI FAQ Assistant for {REPO_OWNER}/{REPO_NAME}")
     print("Initializing data ingestion...")
 
     def filter(doc):
         return 'data-engineering' in doc['filename']
 
-    index = ingest.index_data(repo_owner, repo_name, filter=filter)
+    index = ingest.index_data(REPO_OWNER, REPO_NAME, filter=filter)
     print("Data indexing completed successfully!")
+    return index
 
+
+def initialize_agent(index):
     print("Initializing search agent...")
-    agent = search_agent.init_agent(index, repo_owner, repo_name)
+    agent = search_agent.init_agent(index, REPO_OWNER, REPO_NAME)
     print("Agent initialized successfully!")
-    
+    return agent
+
+
+def main():
+    index = initialize_index()
+    agent = initialize_agent(index)
     print("\nReady to answer your questions!")
     print("Type 'stop' to exit the program.\n")
 
