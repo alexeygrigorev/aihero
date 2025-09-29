@@ -17,8 +17,9 @@ Why it's useful:
 - Direct links to the source in the GitHub repo  
 - Interactive chat interface (via Streamlit) and CLI mode  
 
-Demo: TODO
-
+<a href="https://www.loom.com/share/258c5eb9e2094593a27b627cec38da58">
+    <img src="images/demo.png" />
+</a>
 
 ## Installation
 
@@ -60,7 +61,7 @@ uv run main.py
 
 This opens an interactive CLI environment. You can ask the conversational agent any question about the course.
 
-TODO: add image/gif
+<img src="images/cli.gif" />
 
 Type `stop` to exit.  
 
@@ -70,7 +71,7 @@ Type `stop` to exit.
 uv run streamlit run app.py
 ```
 
-TODO: add image/gif
+<img src="images/streamlit.gif" />
 
 This launches a Streamlit app. You can chat with the assistant in your browser.  
 
