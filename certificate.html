@@ -1,0 +1,393 @@
+---
+layout: default
+title: Certificate of Completion
+description: Generate your certificate for completing the 7-Day AI Agents Email Crash-Course
+---
+
+<style>
+/* Certificate Section Styles */
+.certificate-section {
+  background: var(--bg-light);
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.certificate-preview {
+  max-width: 1000px;
+  margin: var(--spacing-2xl) auto;
+}
+
+.certificate-form {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-2xl);
+  margin: var(--spacing-xl) auto;
+  max-width: 600px;
+}
+
+.certificate-form h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--spacing-md);
+  font-size: var(--text-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-focus);
+}
+
+.btn-generate {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-top: var(--spacing-md);
+}
+
+.btn-generate:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-print {
+  background: var(--success-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-top: var(--spacing-lg);
+  display: none;
+}
+
+.btn-print:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.certificate-placeholder {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  display: none;
+}
+
+.certificate-placeholder.visible {
+  display: block;
+}
+
+.certificate-frame {
+  border: 3px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, #fefefe 0%, #f8f9fa 100%);
+  position: relative;
+}
+
+.certificate-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.certificate-header h3 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.certificate-logo {
+  font-size: 2rem;
+  margin-top: var(--spacing-sm);
+}
+
+.certificate-body {
+  margin: var(--spacing-2xl) 0;
+}
+
+.certificate-text {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  margin: var(--spacing-sm) 0;
+}
+
+.certificate-name {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+}
+
+.certificate-course {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: var(--spacing-md) 0;
+}
+
+.certificate-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  font-style: italic;
+  margin-bottom: var(--spacing-xl);
+}
+
+.certificate-project {
+  font-size: var(--text-md);
+  color: var(--text-medium);
+  font-style: italic;
+  margin: var(--spacing-lg) 0;
+}
+
+.certificate-project-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.signature-line {
+  text-align: center;
+}
+
+.signature-line span {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-dark);
+  display: block;
+  border-bottom: 1px solid var(--text-dark);
+  padding-bottom: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.signature-line small {
+  font-size: var(--text-sm);
+  color: var(--text-medium);
+}
+
+.certificate-date span {
+  font-size: var(--text-md);
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+/* Print Styles for Landscape Certificate */
+@media print {
+  body {
+    background: white;
+  }
+
+  .certificate-form,
+  .btn-print {
+    display: none !important;
+  }
+
+  .certificate-section {
+    padding: 0;
+    background: white;
+    min-height: auto;
+  }
+
+  .certificate-placeholder {
+    display: block !important;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    page-break-inside: avoid;
+  }
+
+  .certificate-preview {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .certificate-frame {
+    border: 3px solid var(--primary-color);
+    padding: 2cm;
+    min-height: 19cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 1cm;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .certificate-frame {
+    padding: var(--spacing-lg);
+  }
+  
+  .certificate-footer {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .signature-line {
+    text-align: center;
+  }
+  
+  .certificate-name {
+    font-size: var(--text-xl);
+  }
+  
+  .certificate-course {
+    font-size: var(--text-lg);
+  }
+}
+</style>
+
+<section class="certificate-section">
+  <div class="section-header">
+    <h2>Certificate of Completion</h2>
+    <p class="section-intro">Generate your professional certificate for completing the 7-Day AI Agents Email Crash-Course.</p>
+  </div>
+
+  <div class="certificate-preview">
+    <div class="certificate-form">
+      <h2>Generate Your Certificate</h2>
+      <form id="certificate-form">
+        <div class="form-group">
+          <label for="student-name">Your Name</label>
+          <input type="text" id="student-name" placeholder="Enter your name" value="Rick Astley" required>
+        </div>
+        <div class="form-group">
+          <label for="project-url">Project URL</label>
+          <input type="text" id="project-url" placeholder="e.g., @alexeygrigorev/aihero/files/code" value="@alexeygrigorev/aihero/files/code" required>
+        </div>
+        <button type="submit" class="btn-generate">Generate Certificate</button>
+      </form>
+    </div>
+
+    <div class="certificate-placeholder" id="certificate-output">
+      <div class="certificate-frame">
+        <div class="certificate-header">
+          <h3>Certificate of Completion</h3>
+          <div class="certificate-logo">🏆</div>
+        </div>
+        
+        <div class="certificate-body">
+          <p class="certificate-text">This certifies that</p>
+          <div class="certificate-name" id="cert-name">[Your Name]</div>
+          <p class="certificate-text">has successfully completed the</p>
+          <div class="certificate-course">"7-Day AI Agents Email Crash-Course"</div>
+          <div class="certificate-subtitle">7-Day Practical Course</div>
+          <div class="certificate-project">
+            <span class="certificate-project-label">Project:</span> <span id="cert-project">[Project URL]</span>
+          </div>
+        </div>
+        
+        <div class="certificate-footer">
+          <div class="certificate-signature">
+            <div class="signature-line">
+              <span>Alexey Grigorev</span>
+              <small>Course Instructor</small>
+            </div>
+          </div>
+          <div class="certificate-date">
+            <span id="cert-date">[Completion Date]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="print-btn" class="btn-print" onclick="window.print()">
+      <i class="fas fa-print"></i> Print Certificate
+    </button>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('certificate-form');
+  const certificateOutput = document.getElementById('certificate-output');
+  const printBtn = document.getElementById('print-btn');
+  const certName = document.getElementById('cert-name');
+  const certProject = document.getElementById('cert-project');
+  const certDate = document.getElementById('cert-date');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const studentName = document.getElementById('student-name').value.trim();
+    const projectUrl = document.getElementById('project-url').value.trim();
+    
+    if (!studentName || !projectUrl) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Update certificate with user input
+    certName.textContent = studentName;
+    certProject.textContent = projectUrl;
+    
+    // Set current date
+    const currentDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    certDate.textContent = currentDate;
+    
+    // Show certificate and print button
+    certificateOutput.classList.add('visible');
+    printBtn.style.display = 'inline-block';
+    
+    // Scroll to certificate
+    certificateOutput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+</script>
