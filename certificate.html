@@ -5,108 +5,135 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 ---
 
 <style>
+/* Reset and base styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
+
 /* Certificate Section Styles */
 .certificate-section {
-  background: var(--bg-light);
-  padding: var(--spacing-2xl) 0;
+  background: #f8f9fa;
+  padding: 2rem 0;
   text-align: center;
   min-height: 100vh;
 }
 
+.section-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 0.75rem 0;
+}
+
+.section-intro {
+  font-size: 1.125rem;
+  color: #666666;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .certificate-preview {
   max-width: 1000px;
-  margin: var(--spacing-2xl) auto;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .certificate-form {
   background: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: var(--spacing-2xl);
-  margin: var(--spacing-xl) auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1.5rem auto;
   max-width: 600px;
 }
 
 .certificate-form h2 {
-  font-size: var(--text-2xl);
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-lg);
+  color: #4a90e2;
+  margin-bottom: 1.25rem;
 }
 
 .form-group {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 1.25rem;
   text-align: left;
 }
 
 .form-group label {
   display: block;
-  font-size: var(--text-md);
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: var(--spacing-sm);
+  color: #333333;
+  margin-bottom: 0.75rem;
 }
 
 .form-group input {
   width: 100%;
-  padding: var(--spacing-md);
-  font-size: var(--text-md);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition-base);
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.375rem;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: var(--shadow-focus);
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
 .btn-generate {
-  background: var(--primary-color);
+  background: #4a90e2;
   color: white;
   border: none;
-  padding: var(--spacing-md) var(--spacing-2xl);
-  font-size: var(--text-lg);
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: 0.375rem;
   cursor: pointer;
-  transition: all var(--transition-base);
-  margin-top: var(--spacing-md);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+  font-family: inherit;
 }
 
 .btn-generate:hover {
-  background: var(--primary-hover);
+  background: #357abd;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-print {
-  background: var(--success-color);
+  background: #5cb85c;
   color: white;
   border: none;
-  padding: var(--spacing-md) var(--spacing-2xl);
-  font-size: var(--text-lg);
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: 0.375rem;
   cursor: pointer;
-  transition: all var(--transition-base);
-  margin-top: var(--spacing-lg);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1.25rem;
   display: none;
+  font-family: inherit;
 }
 
 .btn-print:hover {
   opacity: 0.9;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-placeholder {
   background: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  padding: var(--spacing-xl);
-  margin: var(--spacing-xl) 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
   display: none;
 }
 
@@ -115,83 +142,83 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 }
 
 .certificate-frame {
-  border: 3px solid var(--primary-color);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-2xl);
+  border: 3px solid #4a90e2;
+  border-radius: 0.375rem;
+  padding: 2rem;
   background: linear-gradient(135deg, #fefefe 0%, #f8f9fa 100%);
   position: relative;
 }
 
 .certificate-header {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 1.5rem;
 }
 
 .certificate-header h3 {
-  font-size: var(--text-2xl);
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
-  margin: 0 0 var(--spacing-sm) 0;
+  color: #4a90e2;
+  margin: 0 0 0.75rem 0;
 }
 
 .certificate-logo {
   font-size: 2rem;
-  margin-top: var(--spacing-sm);
+  margin-top: 0.75rem;
 }
 
 .certificate-body {
-  margin: var(--spacing-2xl) 0;
+  margin: 2rem 0;
 }
 
 .certificate-text {
-  font-size: var(--text-lg);
-  color: var(--text-medium);
-  margin: var(--spacing-sm) 0;
+  font-size: 1.125rem;
+  color: #666666;
+  margin: 0.75rem 0;
 }
 
 .certificate-name {
-  font-size: var(--text-2xl);
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
-  border-bottom: 2px solid var(--primary-color);
+  color: #333333;
+  border-bottom: 2px solid #4a90e2;
   display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  margin: var(--spacing-md) 0;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0;
 }
 
 .certificate-course {
-  font-size: var(--text-xl);
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary-color);
-  margin: var(--spacing-md) 0;
+  color: #4a90e2;
+  margin: 1rem 0;
 }
 
 .certificate-subtitle {
-  font-size: var(--text-lg);
-  color: var(--text-medium);
+  font-size: 1.125rem;
+  color: #666666;
   font-style: italic;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 1.5rem;
 }
 
 .certificate-project {
-  font-size: var(--text-md);
-  color: var(--text-medium);
+  font-size: 1rem;
+  color: #666666;
   font-style: italic;
-  margin: var(--spacing-lg) 0;
+  margin: 1.25rem 0;
 }
 
 .certificate-project-label {
   font-weight: 600;
-  color: var(--text-dark);
+  color: #333333;
 }
 
 .certificate-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-2xl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--border-color);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e0e0e0;
 }
 
 .signature-line {
@@ -199,23 +226,23 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 }
 
 .signature-line span {
-  font-size: var(--text-lg);
+  font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #333333;
   display: block;
-  border-bottom: 1px solid var(--text-dark);
+  border-bottom: 1px solid #333333;
   padding-bottom: 2px;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.5rem;
 }
 
 .signature-line small {
-  font-size: var(--text-sm);
-  color: var(--text-medium);
+  font-size: 0.875rem;
+  color: #666666;
 }
 
 .certificate-date span {
-  font-size: var(--text-md);
-  color: var(--text-medium);
+  font-size: 1rem;
+  color: #666666;
   font-weight: 500;
 }
 
@@ -225,6 +252,7 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
     background: white;
   }
 
+  .section-header,
   .certificate-form,
   .btn-print {
     display: none !important;
@@ -247,10 +275,11 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
   .certificate-preview {
     max-width: 100%;
     margin: 0;
+    padding: 0;
   }
 
   .certificate-frame {
-    border: 3px solid var(--primary-color);
+    border: 3px solid #4a90e2;
     padding: 2cm;
     min-height: 19cm;
     display: flex;
@@ -266,13 +295,21 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .certificate-preview {
+    padding: 0 0.5rem;
+  }
+
+  .certificate-form {
+    padding: 1.5rem;
+  }
+
   .certificate-frame {
-    padding: var(--spacing-lg);
+    padding: 1.25rem;
   }
   
   .certificate-footer {
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1rem;
     text-align: center;
   }
   
@@ -281,11 +318,11 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
   }
   
   .certificate-name {
-    font-size: var(--text-xl);
+    font-size: 1.25rem;
   }
   
   .certificate-course {
-    font-size: var(--text-lg);
+    font-size: 1.125rem;
   }
 }
 </style>
