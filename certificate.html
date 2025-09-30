@@ -59,7 +59,7 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 }
 
 .certificate-header {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .certificate-header h3 {
@@ -70,12 +70,11 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 }
 
 .certificate-logo {
-  font-size: var(--text-3xl);
   margin-top: var(--spacing-sm);
 }
 
 .certificate-body {
-  margin: var(--spacing-2xl) 0;
+  margin: var(--spacing-xl) 0;
 }
 
 .certificate-text {
@@ -85,20 +84,18 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 }
 
 .certificate-name {
-  font-size: var(--text-xl);
+  font-size: var(--text-5xl);
   font-weight: 700;
   color: var(--text-dark);
-  border-bottom: 2px solid var(--primary-color);
   display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-md) 0;
 }
 
 .certificate-course {
-  font-size: var(--text-xl);
+  font-size: var(--text-3xl);
   font-weight: 600;
   color: var(--primary-color);
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-md) 0;
 }
 
 .certificate-subtitle {
@@ -122,12 +119,11 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 
 .certificate-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-2xl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
 }
 
 .signature-line {
@@ -158,7 +154,7 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 /* Print Styles for Landscape Certificate */
 @media print {
   body {
-    background: white;
+    background: white !important;
   }
 
   .section-header,
@@ -169,31 +165,145 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
 
   .certificate-section {
     padding: 0;
-    background: white;
+    background: white !important;
     min-height: auto;
   }
 
   .certificate-placeholder {
     display: block !important;
-    box-shadow: none;
+    box-shadow: none !important;
     padding: 0;
     margin: 0;
     page-break-inside: avoid;
   }
 
   .certificate-preview {
-    max-width: 100%;
+    max-width: 100% !important;
     margin: 0;
     padding: 0;
   }
 
   .certificate-frame {
-    border: 3px solid var(--primary-color);
-    padding: 2cm;
-    min-height: 19cm;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    border: 3px solid #4a90e2 !important;
+    border-radius: 6px !important;
+    padding: 1.5cm !important;
+    min-height: 17cm;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f9fa 100%) !important;
+  }
+
+  .certificate-header {
+    margin-bottom: 1rem !important;
+  }
+
+  .certificate-header h3 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #4a90e2 !important;
+    margin: 0 0 0.5rem 0 !important;
+  }
+
+  .certificate-logo {
+    margin-top: 0.5rem !important;
+  }
+
+  .certificate-body {
+    margin: 1rem 0 !important;
+  }
+
+  .certificate-text {
+    font-size: 1.125rem !important;
+    color: #666666 !important;
+    margin: 0.75rem 0 !important;
+  }
+
+  .certificate-name {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #333333 !important;
+    display: inline-block !important;
+    margin: 0.6rem 0 !important;
+  }
+
+  .certificate-course {
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    color: #4a90e2 !important;
+    margin: 0.6rem 0 !important;
+  }
+
+  .certificate-course a {
+    color: #4a90e2 !important;
+    text-decoration: none !important;
+  }
+
+  .certificate-footer-link {
+    margin-top: 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .certificate-footer-link a {
+    color: #4a90e2 !important;
+    text-decoration: underline !important;
+    font-size: 0.875rem !important;
+  }
+
+  .certificate-project {
+    font-size: 1rem !important;
+    color: #666666 !important;
+    font-style: italic !important;
+    margin: 1rem 0 !important;
+  }
+
+  .certificate-project-label {
+    font-weight: 600 !important;
+    color: #333333 !important;
+  }
+
+  .certificate-project a {
+    color: #4a90e2 !important;
+    text-decoration: none !important;
+  }
+
+  .certificate-footer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-top: 2rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .certificate-date {
+    text-align: center !important;
+    margin-top: 1rem !important;
+  }
+
+  .certificate-date span {
+    font-size: 1rem !important;
+    color: #666666 !important;
+    font-weight: 500 !important;
+  }
+
+  .signature-line {
+    text-align: center !important;
+  }
+
+  .signature-line span {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+    display: block !important;
+    border-bottom: 1px solid #333333 !important;
+    padding-bottom: 2px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .signature-line small {
+    font-size: 0.875rem !important;
+    color: #666666 !important;
   }
 
   @page {
@@ -280,31 +390,34 @@ description: Generate your certificate for completing the 7-Day AI Agents Email 
     <div class="certificate-placeholder" id="certificate-output">
       <div class="certificate-frame">
         <div class="certificate-header">
+          <div class="certificate-logo">
+            <img src="/assets/img/trophy.svg" alt="Trophy" style="width: 80px; height: 80px;">
+          </div>
+
           <h3>Certificate of Completion</h3>
-          <div class="certificate-logo">🏆</div>
         </div>
         
         <div class="certificate-body">
           <p class="certificate-text">This certifies that</p>
           <div class="certificate-name" id="cert-name">[Your Name]</div>
           <p class="certificate-text">has successfully completed the</p>
-          <div class="certificate-course">"7-Day AI Agents Email Crash-Course"</div>
-          <div class="certificate-subtitle">7-Day Practical Course</div>
+          <div class="certificate-course"><a href="https://alexeygrigorev.com/aihero/" target="_blank" style="color: var(--primary-color); text-decoration: none;">7-Day AI Agents Crash-Course</a></div>
           <div class="certificate-project">
-            <span class="certificate-project-label">Project:</span> <span id="cert-project">[Project URL]</span>
+            with project: <a id="cert-project" href="#" target="_blank" style="color: var(--primary-color); text-decoration: none;">[Project URL]</a>
           </div>
         </div>
         
         <div class="certificate-footer">
-          <div class="certificate-signature">
-            <div class="signature-line">
-              <span>Alexey Grigorev</span>
-              <small>Course Instructor</small>
-            </div>
+          <div class="signature-line">
+            <span>Alexey Grigorev</span>
+            <small>Course Instructor</small>
           </div>
-          <div class="certificate-date">
-            <span id="cert-date">[Completion Date]</span>
-          </div>
+        </div>
+        <div class="certificate-date">
+          <span id="cert-date">[Completion Date]</span>
+        </div>
+        <div class="certificate-footer-link" style="margin-top: var(--spacing-md); text-align: center;">
+          <a href="https://alexeygrigorev.com/aihero/" target="_blank" style="color: var(--primary-color); text-decoration: underline; font-size: var(--text-sm);">https://alexeygrigorev.com/aihero/</a>
         </div>
       </div>
     </div>
@@ -339,6 +452,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update certificate with user input
     certName.textContent = studentName;
     certProject.textContent = projectUrl;
+    certProject.href = projectUrl;
     
     // Set current date
     const currentDate = new Date().toLocaleDateString('en-US', {
