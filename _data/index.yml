@@ -1,6 +1,6 @@
 curriculum:
   title: "What We Will Build Together In The Next 7 Days"
-  intro: "Learn to build an AI assistant that understands your GitHub project. Through step-by-step lessons, you'll implement data ingestion, search capabilities, and intelligent reasoning to create a working AI agent."
+  intro: "Join our cohort to build an AI assistant that understands your GitHub project. Through step-by-step lessons and peer collaboration, you'll implement data ingestion, search capabilities, and intelligent reasoning to create a working AI agent."
   
   days:
     - number: 1
@@ -57,16 +57,16 @@ curriculum:
       deliverable: "Live, accessible AI agent available on the web"
       
     - number: 7
-      title: "Share Results"
-      description: "Create portfolio content and share your journey"
+      title: "Share Results & Peer Review"
+      description: "Create portfolio content, review peers' projects, and receive your certificate"
       tasks:
         - "Write a project README"
         - "Create demo videos and screenshots"
-        - "Share progress on social media"
+        - "Review three fellow participants' projects"
         - "Add to your portfolio with technical details"
-        - "Receive your certificate of completion"
-        - "Get feedback"
-      deliverable: "Portfolio-ready project with social proof, community engagement, and certificate of completion"
+        - "Share progress on social media"
+        - "Receive your signed certificate of completion"
+      deliverable: "Portfolio-ready project with peer feedback and signed certificate of completion"
   
   summary_stats:
     - number: "7"

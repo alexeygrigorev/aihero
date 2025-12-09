@@ -352,4 +352,207 @@
     font-size: var(--text-sm);
   }
 }
+
+/* Cohort Section Styles - Following Existing Design Patterns */
+.cohort-section {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--bg-gradient-hero);
+  
+  .section-header {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+}
+
+/* Cohort Highlights - Following Overview Section Pattern */
+.cohort-highlights {
+  max-width: 900px;
+  margin: var(--spacing-2xl) auto;
+}
+
+.highlight-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+    
+    .highlight-icon {
+      background: var(--primary-color);
+      
+      svg {
+        color: white;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+}
+
+.highlight-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  
+  svg {
+    color: var(--primary-color);
+    transition: all var(--transition-base);
+  }
+}
+
+.highlight-text {
+  flex: 1;
+  
+  h4 {
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0 0 var(--spacing-xs) 0;
+    line-height: var(--leading-tight);
+  }
+  
+  p {
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    margin: 0;
+    line-height: var(--leading-relaxed);
+  }
+}
+
+/* Curriculum Preview - Following Demo Preview Pattern */
+.curriculum-preview {
+  margin: var(--spacing-3xl) auto 0;
+  max-width: 700px;
+}
+
+.preview-container {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.preview-header {
+  background: var(--bg-light);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  
+  .preview-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.preview-content {
+  padding: var(--spacing-lg);
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+.curriculum-item {
+  padding: var(--spacing-md);
+  background: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  font-weight: 500;
+  
+  @media (max-width: 768px) {
+    padding: var(--spacing-sm);
+    font-size: var(--text-xs);
+  }
+}
+
+/* Cohort CTA - Following Existing Button Styles */
+.cohort-cta {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+}
+
+/* Mobile Responsiveness for Cohort Section */
+@media (max-width: 768px) {
+  .cohort-section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  
+  .cohort-highlights {
+    margin: var(--spacing-xl) auto;
+  }
+  
+  .curriculum-preview {
+    margin: var(--spacing-2xl) auto 0;
+  }
+  
+  .preview-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .cohort-section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+  
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+    
+    .highlight-icon {
+      align-self: center;
+    }
+  }
+  
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
