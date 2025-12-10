@@ -1,0 +1,55 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Brain icon"
+>
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left lobe outline -->
+    <path d="
+      M20 14
+      C14 14, 10 18, 10 24
+      C7 25, 6 28, 6 31
+      C6 35, 8 38, 11 40
+      C10 42, 10 44, 11 46
+      C12 49, 15 51, 18 51
+      C18 54, 20 56, 23 57
+      C26 58, 29 57, 31 55
+      C31 55, 32 54, 32 52
+      L32 18
+      C30 16, 27 14, 24 14
+      C23 14, 21 14, 20 14
+      Z
+    " />
+
+    <!-- Right lobe outline -->
+    <path d="
+      M44 14
+      C50 14, 54 18, 54 24
+      C57 25, 58 28, 58 31
+      C58 35, 56 38, 53 40
+      C54 42, 54 44, 53 46
+      C52 49, 49 51, 46 51
+      C46 54, 44 56, 41 57
+      C38 58, 35 57, 33 55
+      C33 55, 32 54, 32 52
+      L32 18
+      C34 16, 37 14, 40 14
+      C41 14, 43 14, 44 14
+      Z
+    " />
+
+    <!-- Inner folds -->
+    <path d="M18 24 C20 22, 23 22, 25 24" />
+    <path d="M18 30 C21 28, 24 28, 27 31" />
+    <path d="M18 36 C21 35, 24 35, 27 37" />
+    <path d="M46 24 C44 22, 41 22, 39 24" />
+    <path d="M46 30 C43 28, 40 28, 37 31" />
+    <path d="M46 36 C43 35, 40 35, 37 37" />
+
+    <!-- Central vertical fold -->
+    <path d="M32 18 C30 22, 30 26, 32 30 C34 34, 34 38, 32 42" />
+  </g>
+</svg>

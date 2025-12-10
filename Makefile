@@ -15,7 +15,7 @@ install:
 
 # Serve the site locally
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --watch
 
 # Build the site for production
 build:
