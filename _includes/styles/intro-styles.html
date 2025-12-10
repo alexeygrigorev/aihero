@@ -512,6 +512,94 @@
   }
 }
 
+/* Certificate Preview - Special Section for Cohort Certificate */
+.certificate-preview {
+  margin: var(--spacing-3xl) auto 0;
+  max-width: 900px;
+}
+
+.certificate-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+}
+
+.certificate-image {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+  }
+}
+
+.certificate-features {
+  h4 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 var(--spacing-lg) 0;
+    line-height: var(--leading-tight);
+  }
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--primary-color);
+  }
+}
+
+.feature-icon {
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+}
+
+.feature-text {
+  flex: 1;
+  
+  strong {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+    line-height: var(--leading-tight);
+  }
+  
+  span {
+    font-size: var(--text-xs);
+    color: var(--text-medium);
+    line-height: var(--leading-relaxed);
+  }
+}
+
 /* Cohort CTA - Following Existing Button Styles */
 .cohort-cta {
   text-align: center;
@@ -553,6 +641,20 @@
   
   .curriculum-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .certificate-preview {
+    margin: var(--spacing-2xl) auto 0;
+  }
+  
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+    
+    .feature-icon {
+      width: auto;
+    }
   }
 }
 </style>
